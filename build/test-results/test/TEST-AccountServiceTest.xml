@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="AccountServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-07-30T14:29:28" hostname="LAPTOP-VBFHQFG2" time="3.128">
+<testsuite name="AccountServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-07-30T15:39:39" hostname="LAPTOP-VBFHQFG2" time="3.071">
   <properties/>
-  <testcase name="start" classname="AccountServiceTest" time="3.128"/>
+  <testcase name="start" classname="AccountServiceTest" time="3.071"/>
   <system-out><![CDATA[?[1;31m
 Start test 1?[0m
 
@@ -13,20 +13,20 @@ Start test 1?[0m
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::        (v2.3.1.RELEASE)
 
-2022-07-30 17:29:28.777  INFO 2828 --- [    Test worker] account.AccountServiceApplication        : Starting AccountServiceApplication on LAPTOP-VBFHQFG2 with PID 2828 (started by Ansis in C:\Users\Ansis\Desktop\maven\Account Service\Account Service\task)
-2022-07-30 17:29:28.781  INFO 2828 --- [    Test worker] account.AccountServiceApplication        : No active profile set, falling back to default profiles: default
-2022-07-30 17:29:29.926  INFO 2828 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 28852 (http)
-2022-07-30 17:29:29.935  INFO 2828 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-07-30 17:29:29.936  INFO 2828 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
-2022-07-30 17:29:30.030  INFO 2828 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-07-30 17:29:30.030  INFO 2828 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1198 ms
-2022-07-30 17:29:30.303  INFO 2828 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-07-30 17:29:30.591  INFO 2828 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
-2022-07-30 17:29:30.636  INFO 2828 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 28852 (http) with context path ''
-2022-07-30 17:29:30.652  INFO 2828 --- [    Test worker] account.AccountServiceApplication        : Started AccountServiceApplication in 2.158 seconds (JVM running for 3.025)
-2022-07-30 17:29:30.982  INFO 2828 --- [io-28852-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-07-30 17:29:30.983  INFO 2828 --- [io-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-07-30 17:29:30.992  INFO 2828 --- [io-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2022-07-30 18:39:39.849  INFO 17956 --- [    Test worker] account.AccountServiceApplication        : Starting AccountServiceApplication on LAPTOP-VBFHQFG2 with PID 17956 (started by Ansis in C:\Users\Ansis\Desktop\maven\Account Service\Account Service\task)
+2022-07-30 18:39:39.852  INFO 17956 --- [    Test worker] account.AccountServiceApplication        : No active profile set, falling back to default profiles: default
+2022-07-30 18:39:40.998  INFO 17956 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 28852 (http)
+2022-07-30 18:39:41.009  INFO 17956 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-30 18:39:41.010  INFO 17956 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2022-07-30 18:39:41.104  INFO 17956 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-30 18:39:41.105  INFO 17956 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1208 ms
+2022-07-30 18:39:41.367  INFO 17956 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-30 18:39:41.680  INFO 17956 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2022-07-30 18:39:41.723  INFO 17956 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 28852 (http) with context path ''
+2022-07-30 18:39:41.736  INFO 17956 --- [    Test worker] account.AccountServiceApplication        : Started AccountServiceApplication in 2.205 seconds (JVM running for 3.171)
+2022-07-30 18:39:42.022  INFO 17956 --- [io-28852-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-30 18:39:42.023  INFO 17956 --- [io-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-30 18:39:42.030  INFO 17956 --- [io-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
 John
 Doe
 ?[1;31m
@@ -71,9 +71,9 @@ John
 Doe
 ?[1;31m
 Start test 12?[0m
-2022-07-30 17:29:31.188  WARN 2828 --- [io-28852-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
-2022-07-30 17:29:31.207  WARN 2828 --- [io-28852-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PUT' not supported]
-2022-07-30 17:29:31.214  WARN 2828 --- [io-28852-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'DELETE' not supported]
+2022-07-30 18:39:42.215  WARN 17956 --- [io-28852-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2022-07-30 18:39:42.234  WARN 17956 --- [io-28852-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PUT' not supported]
+2022-07-30 18:39:42.242  WARN 17956 --- [io-28852-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'DELETE' not supported]
 ?[1;31m
 Start test 13?[0m
 John
