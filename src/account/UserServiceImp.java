@@ -19,6 +19,7 @@ public class UserServiceImp implements UserService{
     @Override
     public List<User> getAll() {
         return userRepository.findAll();
+
     }
 
     @Override
@@ -36,4 +37,10 @@ public class UserServiceImp implements UserService{
         userRepository.deleteById(email);
 
     }
+
+    @Override
+    public boolean exists(String email) {
+        return userRepository.existsById(email);
+    }
+
 }

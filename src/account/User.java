@@ -1,13 +1,15 @@
 package account;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.Generated;
+import org.hibernate.annotations.GenerationTime;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+
 
 @Getter
 @Setter
@@ -20,8 +22,17 @@ public class User {
     @Column(name = "email", nullable = false)
     private String email;
 
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "ID", referencedColumnName = "number")
+    @JsonIgnore
+    private GeneralSequenceNumber number;
+
     @Column(length = 30)
     private String name;
+
+    @JsonInclude()
+    @Transient
+    Long id;
 
     @Column(length = 30)
     private String lastname;
@@ -32,6 +43,7 @@ public class User {
 
 
     public User() {
+        number = new GeneralSequenceNumber();
     }
 
     public User(String name, String lastname, String email, String password) {
@@ -39,6 +51,7 @@ public class User {
         this.lastname = lastname;
         this.email = email;
         this.password = password;
+        number = new GeneralSequenceNumber();
     }
 
     public boolean valid() {

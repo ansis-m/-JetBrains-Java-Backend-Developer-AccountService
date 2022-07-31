@@ -9,4 +9,5 @@ public interface UserService {
     void save(User user);
     User findByEmail(String email);
     void deleteByEmail(String email);
+    boolean exists(String email);
 }
