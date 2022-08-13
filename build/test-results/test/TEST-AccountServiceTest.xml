@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="AccountServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-07-30T15:39:39" hostname="LAPTOP-VBFHQFG2" time="3.071">
+<testsuite name="AccountServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-08-13T09:06:46" hostname="LAPTOP-VBFHQFG2" time="7.949">
   <properties/>
-  <testcase name="start" classname="AccountServiceTest" time="3.071"/>
+  <testcase name="start" classname="AccountServiceTest" time="7.949"/>
   <system-out><![CDATA[?[1;31m
 Start test 1?[0m
 
@@ -13,71 +13,422 @@ Start test 1?[0m
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::        (v2.3.1.RELEASE)
 
-2022-07-30 18:39:39.849  INFO 17956 --- [    Test worker] account.AccountServiceApplication        : Starting AccountServiceApplication on LAPTOP-VBFHQFG2 with PID 17956 (started by Ansis in C:\Users\Ansis\Desktop\maven\Account Service\Account Service\task)
-2022-07-30 18:39:39.852  INFO 17956 --- [    Test worker] account.AccountServiceApplication        : No active profile set, falling back to default profiles: default
-2022-07-30 18:39:40.998  INFO 17956 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 28852 (http)
-2022-07-30 18:39:41.009  INFO 17956 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-07-30 18:39:41.010  INFO 17956 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
-2022-07-30 18:39:41.104  INFO 17956 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-07-30 18:39:41.105  INFO 17956 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1208 ms
-2022-07-30 18:39:41.367  INFO 17956 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-07-30 18:39:41.680  INFO 17956 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
-2022-07-30 18:39:41.723  INFO 17956 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 28852 (http) with context path ''
-2022-07-30 18:39:41.736  INFO 17956 --- [    Test worker] account.AccountServiceApplication        : Started AccountServiceApplication in 2.205 seconds (JVM running for 3.171)
-2022-07-30 18:39:42.022  INFO 17956 --- [io-28852-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-07-30 18:39:42.023  INFO 17956 --- [io-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-07-30 18:39:42.030  INFO 17956 --- [io-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2022-08-13 12:06:47.550  INFO 5312 --- [    Test worker] account.AccountServiceApplication        : Starting AccountServiceApplication on LAPTOP-VBFHQFG2 with PID 5312 (started by Ansis in C:\Users\Ansis\Desktop\maven\Account Service\Account Service\task)
+2022-08-13 12:06:47.554  INFO 5312 --- [    Test worker] account.AccountServiceApplication        : No active profile set, falling back to default profiles: default
+2022-08-13 12:06:48.519  INFO 5312 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2022-08-13 12:06:48.580  INFO 5312 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54ms. Found 2 JPA repository interfaces.
+2022-08-13 12:06:49.128  INFO 5312 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 28852 (http)
+2022-08-13 12:06:49.138  INFO 5312 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-08-13 12:06:49.139  INFO 5312 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2022-08-13 12:06:49.231  INFO 5312 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-08-13 12:06:49.231  INFO 5312 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1626 ms
+2022-08-13 12:06:49.351  INFO 5312 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-08-13 12:06:49.513  INFO 5312 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-08-13 12:06:49.519  INFO 5312 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:../service_db'
+2022-08-13 12:06:49.657  INFO 5312 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-13 12:06:49.702  INFO 5312 --- [         task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-13 12:06:49.750  WARN 5312 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-13 12:06:49.769  INFO 5312 --- [         task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.17.Final
+2022-08-13 12:06:49.925  INFO 5312 --- [         task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2022-08-13 12:06:50.057  INFO 5312 --- [         task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-08-13 12:06:50.339  INFO 5312 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2022-08-13 12:06:50.388  INFO 5312 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@a6dffdb, org.springframework.security.web.context.SecurityContextPersistenceFilter@71d99732, org.springframework.security.web.header.HeaderWriterFilter@1e8bccfb, org.springframework.security.web.authentication.logout.LogoutFilter@1f68e4e8, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@654b899f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@42a05533, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@404009df, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@40ac0a56, org.springframework.security.web.session.SessionManagementFilter@338a4c61, org.springframework.security.web.access.ExceptionTranslationFilter@3e6acec2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4dac40b]
+Hibernate: create table id (number bigint not null, primary key (number))
+Hibernate: create table user (email varchar(255) not null, id bigint, lastname varchar(30), name varchar(30), password varchar(255), idd bigint, primary key (email))
+Hibernate: create sequence hibernate_sequence start with 1 increment by 1
+Hibernate: alter table user add constraint FK3mi03cam43b65y2a7q2o4mbc0 foreign key (idd) references id
+2022-08-13 12:06:50.788  INFO 5312 --- [         task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-13 12:06:50.795  INFO 5312 --- [         task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-13 12:06:50.905  INFO 5312 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 28852 (http) with context path ''
+2022-08-13 12:06:50.906  INFO 5312 --- [    Test worker] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2022-08-13 12:06:51.172  INFO 5312 --- [    Test worker] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2022-08-13 12:06:51.183  INFO 5312 --- [    Test worker] account.AccountServiceApplication        : Started AccountServiceApplication in 3.906 seconds (JVM running for 4.67)
+2022-08-13 12:06:51.456  INFO 5312 --- [io-28852-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-13 12:06:51.456  INFO 5312 --- [io-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-08-13 12:06:51.463  INFO 5312 --- [io-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+
+
+REGISTRATION
+
 John
 Doe
+johndoe@acme.com
+secret
+********************
+Hibernate: select count(*) as col_0_0_ from user user0_ where user0_.email=?
+SAVED!!!
+
+Hibernate: select user0_.email as email1_1_1_, user0_.id as id2_1_1_, user0_.lastname as lastname3_1_1_, user0_.name as name4_1_1_, user0_.idd as idd6_1_1_, user0_.password as password5_1_1_, generalseq1_.number as number1_0_0_ from user user0_ left outer join id generalseq1_ on user0_.idd=generalseq1_.number where user0_.email=?
+Hibernate: call next value for hibernate_sequence
+Hibernate: insert into id (number) values (?)
+Hibernate: insert into user (id, lastname, name, idd, password, email) values (?, ?, ?, ?, ?, ?)
+Hibernate: update user set id=?, lastname=?, name=?, idd=?, password=? where email=?
+
+
+REGISTRATION
+
+John
+Doe
+johndoe@acme.com
+secret
+********************
+Hibernate: select count(*) as col_0_0_ from user user0_ where user0_.email=?
+NOT SAVED!!!
+
 ?[1;31m
 Start test 2?[0m
 
+
+REGISTRATION
+
+John
 Doe
+johndoe@acme.com
+secret
+********************
+Hibernate: select count(*) as col_0_0_ from user user0_ where user0_.email=?
+NOT SAVED!!!
+
 ?[1;31m
 Start test 3?[0m
-null
+
+
+REGISTRATION
+
+John
 Doe
+johndoe@acme.com
+secret
+********************
+Hibernate: select count(*) as col_0_0_ from user user0_ where user0_.email=?
+NOT SAVED!!!
+
 ?[1;31m
 Start test 4?[0m
+
+
+REGISTRATION
+
 John
+Doe
+johndoe@acme.com
+secret
+********************
+Hibernate: select count(*) as col_0_0_ from user user0_ where user0_.email=?
+NOT SAVED!!!
 
 ?[1;31m
 Start test 5?[0m
-John
-null
+
+
+REGISTRATION
+
+Max
+Mustermann
+maxmustermann@acme.com
+secret
+********************
+Hibernate: select count(*) as col_0_0_ from user user0_ where user0_.email=?
+SAVED!!!
+
+Hibernate: select user0_.email as email1_1_1_, user0_.id as id2_1_1_, user0_.lastname as lastname3_1_1_, user0_.name as name4_1_1_, user0_.idd as idd6_1_1_, user0_.password as password5_1_1_, generalseq1_.number as number1_0_0_ from user user0_ left outer join id generalseq1_ on user0_.idd=generalseq1_.number where user0_.email=?
+Hibernate: call next value for hibernate_sequence
+Hibernate: insert into id (number) values (?)
+Hibernate: insert into user (id, lastname, name, idd, password, email) values (?, ?, ?, ?, ?, ?)
+Hibernate: update user set id=?, lastname=?, name=?, idd=?, password=? where email=?
+
+
+REGISTRATION
+
+Max
+Mustermann
+maxmustermann@acme.com
+secret
+********************
+Hibernate: select count(*) as col_0_0_ from user user0_ where user0_.email=?
+NOT SAVED!!!
+
 ?[1;31m
 Start test 6?[0m
-John
-Doe
+
+
+REGISTRATION
+
+Max
+Mustermann
+maxmustermann@acme.com
+secret
+********************
+Hibernate: select count(*) as col_0_0_ from user user0_ where user0_.email=?
+NOT SAVED!!!
+
 ?[1;31m
 Start test 7?[0m
-John
-null
+
+
+REGISTRATION
+
+Max
+Mustermann
+maxmustermann@acme.com
+secret
+********************
+Hibernate: select count(*) as col_0_0_ from user user0_ where user0_.email=?
+NOT SAVED!!!
+
 ?[1;31m
 Start test 8?[0m
-John
+
+
+REGISTRATION
+
+
 Doe
+johndoe@acme.com
+secret
+********************
+NOT SAVED!!!
+
 ?[1;31m
 Start test 9?[0m
-John
+
+
+REGISTRATION
+
+null
 Doe
+johndoe@acme.com
+secret
+********************
+NOT SAVED!!!
+
 ?[1;31m
 Start test 10?[0m
+
+
+REGISTRATION
+
 John
-Doe
+
+johndoe@acme.com
+secret
+********************
+NOT SAVED!!!
+
 ?[1;31m
 Start test 11?[0m
+
+
+REGISTRATION
+
 John
-Doe
+null
+johndoe@acme.com
+secret
+********************
+NOT SAVED!!!
+
 ?[1;31m
 Start test 12?[0m
-2022-07-30 18:39:42.215  WARN 17956 --- [io-28852-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
-2022-07-30 18:39:42.234  WARN 17956 --- [io-28852-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PUT' not supported]
-2022-07-30 18:39:42.242  WARN 17956 --- [io-28852-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'DELETE' not supported]
-?[1;31m
-Start test 13?[0m
+
+
+REGISTRATION
+
 John
 Doe
+
+secret
+********************
+NOT SAVED!!!
+
+?[1;31m
+Start test 13?[0m
+
+
+REGISTRATION
+
+John
+null
+johndoe@acme.com
+secret
+********************
+NOT SAVED!!!
+
+?[1;31m
+Start test 14?[0m
+
+
+REGISTRATION
+
+John
+Doe
+johndoe@acme.com
+
+********************
+NOT SAVED!!!
+
+?[1;31m
+Start test 15?[0m
+
+
+REGISTRATION
+
+John
+Doe
+johndoe@acme.com
+null
+********************
+NOT SAVED!!!
+
+?[1;31m
+Start test 16?[0m
+
+
+REGISTRATION
+
+John
+Doe
+johndoeacme.com
+secret
+********************
+NOT SAVED!!!
+
+?[1;31m
+Start test 17?[0m
+
+
+REGISTRATION
+
+John
+Doe
+johndoe@google.com
+secret
+********************
+NOT SAVED!!!
+
+?[1;31m
+Start test 18?[0m
+Hibernate: select user0_.email as email1_1_, user0_.id as id2_1_, user0_.lastname as lastname3_1_, user0_.name as name4_1_, user0_.idd as idd6_1_, user0_.password as password5_1_ from user user0_ where user0_.email=?
+Hibernate: select generalseq0_.number as number1_0_0_, user1_.email as email1_1_1_, user1_.id as id2_1_1_, user1_.lastname as lastname3_1_1_, user1_.name as name4_1_1_, user1_.idd as idd6_1_1_, user1_.password as password5_1_1_ from id generalseq0_ left outer join user user1_ on generalseq0_.number=user1_.idd where generalseq0_.number=?
+Hibernate: select user0_.email as email1_1_1_, user0_.id as id2_1_1_, user0_.lastname as lastname3_1_1_, user0_.name as name4_1_1_, user0_.idd as idd6_1_1_, user0_.password as password5_1_1_, generalseq1_.number as number1_0_0_ from user user0_ left outer join id generalseq1_ on user0_.idd=generalseq1_.number where user0_.idd=?
+
+
+PAYMENT
+johndoe@acme.com
+Hibernate: select user0_.email as email1_1_0_, user0_.id as id2_1_0_, user0_.lastname as lastname3_1_0_, user0_.name as name4_1_0_, user0_.idd as idd6_1_0_, user0_.password as password5_1_0_, generalseq1_.number as number1_0_1_ from user user0_ left outer join id generalseq1_ on user0_.idd=generalseq1_.number where user0_.email=?
+John
+Doe
+?[1;31m
+Start test 19?[0m
+Hibernate: select user0_.email as email1_1_, user0_.id as id2_1_, user0_.lastname as lastname3_1_, user0_.name as name4_1_, user0_.idd as idd6_1_, user0_.password as password5_1_ from user user0_ where user0_.email=?
+Hibernate: select generalseq0_.number as number1_0_0_, user1_.email as email1_1_1_, user1_.id as id2_1_1_, user1_.lastname as lastname3_1_1_, user1_.name as name4_1_1_, user1_.idd as idd6_1_1_, user1_.password as password5_1_1_ from id generalseq0_ left outer join user user1_ on generalseq0_.number=user1_.idd where generalseq0_.number=?
+Hibernate: select user0_.email as email1_1_1_, user0_.id as id2_1_1_, user0_.lastname as lastname3_1_1_, user0_.name as name4_1_1_, user0_.idd as idd6_1_1_, user0_.password as password5_1_1_, generalseq1_.number as number1_0_0_ from user user0_ left outer join id generalseq1_ on user0_.idd=generalseq1_.number where user0_.idd=?
+
+
+PAYMENT
+johndoe@acme.com
+Hibernate: select user0_.email as email1_1_0_, user0_.id as id2_1_0_, user0_.lastname as lastname3_1_0_, user0_.name as name4_1_0_, user0_.idd as idd6_1_0_, user0_.password as password5_1_0_, generalseq1_.number as number1_0_1_ from user user0_ left outer join id generalseq1_ on user0_.idd=generalseq1_.number where user0_.email=?
+John
+Doe
+?[1;31m
+Start test 20?[0m
+Hibernate: select user0_.email as email1_1_, user0_.id as id2_1_, user0_.lastname as lastname3_1_, user0_.name as name4_1_, user0_.idd as idd6_1_, user0_.password as password5_1_ from user user0_ where user0_.email=?
+Hibernate: select generalseq0_.number as number1_0_0_, user1_.email as email1_1_1_, user1_.id as id2_1_1_, user1_.lastname as lastname3_1_1_, user1_.name as name4_1_1_, user1_.idd as idd6_1_1_, user1_.password as password5_1_1_ from id generalseq0_ left outer join user user1_ on generalseq0_.number=user1_.idd where generalseq0_.number=?
+Hibernate: select user0_.email as email1_1_1_, user0_.id as id2_1_1_, user0_.lastname as lastname3_1_1_, user0_.name as name4_1_1_, user0_.idd as idd6_1_1_, user0_.password as password5_1_1_, generalseq1_.number as number1_0_0_ from user user0_ left outer join id generalseq1_ on user0_.idd=generalseq1_.number where user0_.idd=?
+
+
+PAYMENT
+maxmustermann@acme.com
+Hibernate: select user0_.email as email1_1_0_, user0_.id as id2_1_0_, user0_.lastname as lastname3_1_0_, user0_.name as name4_1_0_, user0_.idd as idd6_1_0_, user0_.password as password5_1_0_, generalseq1_.number as number1_0_1_ from user user0_ left outer join id generalseq1_ on user0_.idd=generalseq1_.number where user0_.email=?
+Max
+Mustermann
+?[1;31m
+Start test 21?[0m
+Hibernate: select user0_.email as email1_1_, user0_.id as id2_1_, user0_.lastname as lastname3_1_, user0_.name as name4_1_, user0_.idd as idd6_1_, user0_.password as password5_1_ from user user0_ where user0_.email=?
+Hibernate: select generalseq0_.number as number1_0_0_, user1_.email as email1_1_1_, user1_.id as id2_1_1_, user1_.lastname as lastname3_1_1_, user1_.name as name4_1_1_, user1_.idd as idd6_1_1_, user1_.password as password5_1_1_ from id generalseq0_ left outer join user user1_ on generalseq0_.number=user1_.idd where generalseq0_.number=?
+Hibernate: select user0_.email as email1_1_1_, user0_.id as id2_1_1_, user0_.lastname as lastname3_1_1_, user0_.name as name4_1_1_, user0_.idd as idd6_1_1_, user0_.password as password5_1_1_, generalseq1_.number as number1_0_0_ from user user0_ left outer join id generalseq1_ on user0_.idd=generalseq1_.number where user0_.idd=?
+
+
+PAYMENT
+maxmustermann@acme.com
+Hibernate: select user0_.email as email1_1_0_, user0_.id as id2_1_0_, user0_.lastname as lastname3_1_0_, user0_.name as name4_1_0_, user0_.idd as idd6_1_0_, user0_.password as password5_1_0_, generalseq1_.number as number1_0_1_ from user user0_ left outer join id generalseq1_ on user0_.idd=generalseq1_.number where user0_.email=?
+Max
+Mustermann
+?[1;31m
+Start test 22?[0m
+Hibernate: select user0_.email as email1_1_, user0_.id as id2_1_, user0_.lastname as lastname3_1_, user0_.name as name4_1_, user0_.idd as idd6_1_, user0_.password as password5_1_ from user user0_ where user0_.email=?
+Hibernate: select generalseq0_.number as number1_0_0_, user1_.email as email1_1_1_, user1_.id as id2_1_1_, user1_.lastname as lastname3_1_1_, user1_.name as name4_1_1_, user1_.idd as idd6_1_1_, user1_.password as password5_1_1_ from id generalseq0_ left outer join user user1_ on generalseq0_.number=user1_.idd where generalseq0_.number=?
+Hibernate: select user0_.email as email1_1_1_, user0_.id as id2_1_1_, user0_.lastname as lastname3_1_1_, user0_.name as name4_1_1_, user0_.idd as idd6_1_1_, user0_.password as password5_1_1_, generalseq1_.number as number1_0_0_ from user user0_ left outer join id generalseq1_ on user0_.idd=generalseq1_.number where user0_.idd=?
+?[1;31m
+Start test 23?[0m
+Hibernate: select user0_.email as email1_1_, user0_.id as id2_1_, user0_.lastname as lastname3_1_, user0_.name as name4_1_, user0_.idd as idd6_1_, user0_.password as password5_1_ from user user0_ where user0_.email=?
+Hibernate: select generalseq0_.number as number1_0_0_, user1_.email as email1_1_1_, user1_.id as id2_1_1_, user1_.lastname as lastname3_1_1_, user1_.name as name4_1_1_, user1_.idd as idd6_1_1_, user1_.password as password5_1_1_ from id generalseq0_ left outer join user user1_ on generalseq0_.number=user1_.idd where generalseq0_.number=?
+Hibernate: select user0_.email as email1_1_1_, user0_.id as id2_1_1_, user0_.lastname as lastname3_1_1_, user0_.name as name4_1_1_, user0_.idd as idd6_1_1_, user0_.password as password5_1_1_, generalseq1_.number as number1_0_0_ from user user0_ left outer join id generalseq1_ on user0_.idd=generalseq1_.number where user0_.idd=?
+?[1;31m
+Start test 24?[0m
+Hibernate: select user0_.email as email1_1_, user0_.id as id2_1_, user0_.lastname as lastname3_1_, user0_.name as name4_1_, user0_.idd as idd6_1_, user0_.password as password5_1_ from user user0_ where user0_.email=?
+?[1;31m
+Start test 25?[0m
+Hibernate: select user0_.email as email1_1_, user0_.id as id2_1_, user0_.lastname as lastname3_1_, user0_.name as name4_1_, user0_.idd as idd6_1_, user0_.password as password5_1_ from user user0_ where user0_.email=?
+Hibernate: select generalseq0_.number as number1_0_0_, user1_.email as email1_1_1_, user1_.id as id2_1_1_, user1_.lastname as lastname3_1_1_, user1_.name as name4_1_1_, user1_.idd as idd6_1_1_, user1_.password as password5_1_1_ from id generalseq0_ left outer join user user1_ on generalseq0_.number=user1_.idd where generalseq0_.number=?
+Hibernate: select user0_.email as email1_1_1_, user0_.id as id2_1_1_, user0_.lastname as lastname3_1_1_, user0_.name as name4_1_1_, user0_.idd as idd6_1_1_, user0_.password as password5_1_1_, generalseq1_.number as number1_0_0_ from user user0_ left outer join id generalseq1_ on user0_.idd=generalseq1_.number where user0_.idd=?
+?[1;31m
+Start test 26?[0m
+Hibernate: select user0_.email as email1_1_, user0_.id as id2_1_, user0_.lastname as lastname3_1_, user0_.name as name4_1_, user0_.idd as idd6_1_, user0_.password as password5_1_ from user user0_ where user0_.email=?
+?[1;31m
+Start test 27?[0m
+?[1;31m
+Start test 28?[0m
+2022-08-13 12:06:53.640  INFO 5312 --- [     Thread-336] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-08-13 12:06:53.641  INFO 5312 --- [     Thread-336] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-08-13 12:06:53.642  INFO 5312 --- [     Thread-336] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-08-13 12:06:53.651  INFO 5312 --- [     Thread-336] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.3.1.RELEASE)
+
+2022-08-13 12:06:53.690  INFO 5312 --- [    Test worker] account.AccountServiceApplication        : Starting AccountServiceApplication on LAPTOP-VBFHQFG2 with PID 5312 (started by Ansis in C:\Users\Ansis\Desktop\maven\Account Service\Account Service\task)
+2022-08-13 12:06:53.690  INFO 5312 --- [    Test worker] account.AccountServiceApplication        : No active profile set, falling back to default profiles: default
+2022-08-13 12:06:54.054  INFO 5312 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2022-08-13 12:06:54.066  INFO 5312 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11ms. Found 2 JPA repository interfaces.
+2022-08-13 12:06:54.164  INFO 5312 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 28852 (http)
+2022-08-13 12:06:54.165  INFO 5312 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-08-13 12:06:54.165  INFO 5312 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2022-08-13 12:06:54.190  INFO 5312 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-08-13 12:06:54.190  INFO 5312 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 498 ms
+2022-08-13 12:06:54.227  INFO 5312 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2022-08-13 12:06:54.239  INFO 5312 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2022-08-13 12:06:54.239  INFO 5312 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:../service_db'
+2022-08-13 12:06:54.281  INFO 5312 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-13 12:06:54.287  INFO 5312 --- [         task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-13 12:06:54.294  INFO 5312 --- [         task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-08-13 12:06:54.321  WARN 5312 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-13 12:06:54.369  INFO 5312 --- [         task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-13 12:06:54.370  INFO 5312 --- [         task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-13 12:06:54.574  INFO 5312 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2022-08-13 12:06:54.582  INFO 5312 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@23ade612, org.springframework.security.web.context.SecurityContextPersistenceFilter@4027edeb, org.springframework.security.web.header.HeaderWriterFilter@632d1b1b, org.springframework.security.web.authentication.logout.LogoutFilter@7d4135c9, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@59db8216, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@48cd8e71, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@43b3b1b0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@47224d5d, org.springframework.security.web.session.SessionManagementFilter@3c2fa57a, org.springframework.security.web.access.ExceptionTranslationFilter@796e2187, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@463a1f47]
+2022-08-13 12:06:54.648  INFO 5312 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 28852 (http) with context path ''
+2022-08-13 12:06:54.649  INFO 5312 --- [    Test worker] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2022-08-13 12:06:54.705  INFO 5312 --- [    Test worker] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2022-08-13 12:06:54.710  INFO 5312 --- [    Test worker] account.AccountServiceApplication        : Started AccountServiceApplication in 1.04 seconds (JVM running for 8.198)
+?[1;31m
+Start test 29?[0m
+2022-08-13 12:06:54.718  INFO 5312 --- [io-28852-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-13 12:06:54.719  INFO 5312 --- [io-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-08-13 12:06:54.721  INFO 5312 --- [io-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+Hibernate: select user0_.email as email1_1_, user0_.id as id2_1_, user0_.lastname as lastname3_1_, user0_.name as name4_1_, user0_.idd as idd6_1_, user0_.password as password5_1_ from user user0_ where user0_.email=?
+Hibernate: select generalseq0_.number as number1_0_0_, user1_.email as email1_1_1_, user1_.id as id2_1_1_, user1_.lastname as lastname3_1_1_, user1_.name as name4_1_1_, user1_.idd as idd6_1_1_, user1_.password as password5_1_1_ from id generalseq0_ left outer join user user1_ on generalseq0_.number=user1_.idd where generalseq0_.number=?
+Hibernate: select user0_.email as email1_1_1_, user0_.id as id2_1_1_, user0_.lastname as lastname3_1_1_, user0_.name as name4_1_1_, user0_.idd as idd6_1_1_, user0_.password as password5_1_1_, generalseq1_.number as number1_0_0_ from user user0_ left outer join id generalseq1_ on user0_.idd=generalseq1_.number where user0_.idd=?
+
+
+PAYMENT
+johndoe@acme.com
+Hibernate: select user0_.email as email1_1_0_, user0_.id as id2_1_0_, user0_.lastname as lastname3_1_0_, user0_.name as name4_1_0_, user0_.idd as idd6_1_0_, user0_.password as password5_1_0_, generalseq1_.number as number1_0_1_ from user user0_ left outer join id generalseq1_ on user0_.idd=generalseq1_.number where user0_.email=?
 John
 Doe
 ]]></system-out>
