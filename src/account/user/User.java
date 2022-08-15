@@ -7,7 +7,6 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 import lombok.Setter;
-
 import javax.persistence.*;
 import javax.validation.constraints.Size;
 import java.util.ArrayList;
@@ -34,7 +33,6 @@ public class User {
     private String name;
 
     @JsonInclude()
-    //@Transient
     Long id;
 
     @Column(length = 30)
@@ -71,7 +69,6 @@ public class User {
         this.months = months;
     }
 
-
     public void setId(Long id) {
         this.id = id;
     }
@@ -96,8 +93,4 @@ public class User {
                 password.length() > 0 && email.endsWith("@acme.com");
     }
 
-    public void setPaySlips(int i, PaySlip newPaySlip) {
-
-        this.paySlips.set(i, newPaySlip);
-    }
 }

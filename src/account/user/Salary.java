@@ -1,11 +1,8 @@
 package account.user;
 
-import com.fasterxml.jackson.datatype.jsr310.deser.YearMonthDeserializer;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
-import java.time.YearMonth;
 import java.util.ArrayList;
 
 @Getter
@@ -24,7 +21,6 @@ public class Salary {
     }
 
     public static String parsePayments(ArrayList<Salary> salary){
-
 
         StringBuilder result = new StringBuilder();
         boolean comma = false;
@@ -47,7 +43,6 @@ public class Salary {
     }
 
     public static String parsePayments(Salary salary){
-
 
         StringBuilder result = new StringBuilder();
         boolean comma = false;

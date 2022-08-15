@@ -7,7 +7,6 @@ import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
@@ -17,13 +16,11 @@ import javax.validation.constraints.NotNull;
 @Entity
 public class PaySlip {
 
-
        @Id
        @GeneratedValue(strategy = GenerationType.AUTO)
        @Column(name = "id", nullable = false)
        @JsonIgnore
        private Long id;
-
 
        @ManyToOne(targetEntity = User.class,
                fetch = FetchType.LAZY,
@@ -58,11 +55,9 @@ public class PaySlip {
               this.date = salary.getPeriod();
 
               int amount = salary.getSalary();
-              System.out.println("\n\nAMOUNT: " + amount + "\n\n");
               this.salary = String.format("%d dollar(s)", amount/100);
               if (amount % 100 >= 0)
                      this.salary += String.format(" %d cent(s)", amount % 100);
-
 
               StringBuilder builder = new StringBuilder();
               String[] tokens = salary.getPeriod().split("-");
@@ -71,13 +66,10 @@ public class PaySlip {
                      builder.append(months[Integer.valueOf(tokens[0]) - 1]);
                      builder.append("-");
                      builder.append(tokens[1]);
-
               }
               catch (Exception e){
-                     System.out.println("From payslip constructor parsing date!");
                      e.printStackTrace();
               }
-
               this.period = builder.toString();
        }
 }

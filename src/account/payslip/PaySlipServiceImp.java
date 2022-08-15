@@ -1,6 +1,5 @@
 package account.payslip;
 
-import account.user.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -9,10 +8,8 @@ import java.util.List;
 @Service
 public class PaySlipServiceImp implements PaySlipService {
 
-
     @Autowired
     PaySlipRepository paySlipRepository;
-
 
     @Override
     public List<PaySlip> getAll() {
@@ -22,7 +19,6 @@ public class PaySlipServiceImp implements PaySlipService {
     @Override
     public void save(PaySlip paySlip) {
         paySlipRepository.save(paySlip);
-
     }
 
     @Override
