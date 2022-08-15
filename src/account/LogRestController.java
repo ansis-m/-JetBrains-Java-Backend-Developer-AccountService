@@ -1,6 +1,9 @@
 package account;
 
+import account.payslip.PaySlipServiceImp;
 import account.securityConfig.pCheck;
+import account.payslip.PaySlip;
+import account.user.Salary;
 import account.user.User;
 import account.user.UserServiceImp;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +14,9 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Map;
 
 @RestController
@@ -18,6 +24,9 @@ public class LogRestController {
 
     @Autowired
     UserServiceImp userServiceImp;
+
+    @Autowired
+    PaySlipServiceImp paySlipServiceImp;
 
     @Autowired
     PasswordEncoder encoder;
@@ -93,20 +102,107 @@ public class LogRestController {
 
 
     @GetMapping ("api/empl/payment")
-    public ResponseEntity Payment(Authentication auth){
+    public ResponseEntity Payment(@RequestParam (required=false) String period, Authentication auth){
 
 
-        System.out.println("\n\nPAYMENT\n" + auth.getName());
+        System.out.println("\n\n******PAYMENT********\n" + auth.getName());
+
+        if(period != null)
+            System.out.println("Period: " + period + "\n");
 
             User user = userServiceImp.findByEmail(auth.getName());
             if(user != null) {
                 System.out.println(user.getName());
                 System.out.println(user.getLastname());
-                return  new ResponseEntity(user, HttpStatus.OK);
+                ArrayList<PaySlip> payslips = new ArrayList<>(user.getPaySlips());
+                Collections.reverse(payslips);
+                if(period == null)
+                    return  new ResponseEntity(payslips, HttpStatus.OK);
+                else {
+                    for(PaySlip p : payslips){
+                        System.out.println("period and date: " + period + "  " + p.getDate());
+                        if(p.getDate().equals(period))
+                            return  new ResponseEntity(p, HttpStatus.OK);
+                    }
+                }
+                return  new ResponseEntity(Map.of("timestamp", LocalDate.now(), "status", 400, "error", "Bad Request", "path", "/api/empl/payment", "message", "message"), HttpStatus.BAD_REQUEST);
             }
             else
-                return new ResponseEntity(HttpStatus.UNAUTHORIZED);
+                return new ResponseEntity(HttpStatus.BAD_REQUEST);
+    }
 
+    @PostMapping ("api/acct/payments")
+    public ResponseEntity Payments(@RequestBody ArrayList<Salary> salary){
+
+        System.out.println("INSIDE api/acct/payments");
+        for(Salary s : salary) {
+            System.out.println(s.getPeriod() + "   " + s.getEmployee() + "  " + s.getSalary());
+        }
+
+        String message = Salary.parsePayments(salary);
+        System.out.println("message: " + message);
+        if (message.length() > 5)
+            return new ResponseEntity(Map.of("timestamp",LocalDate.now(), "error", "Bad Request", "path", "/api/acct/payments", "message", message, "status", 400), HttpStatus.BAD_REQUEST);
+
+        for(Salary s : salary) {
+            try{
+                System.out.println("email?:  " + s.getEmployee());
+                User user = userServiceImp.findByEmail(s.getEmployee());
+                if(user == null) {
+                    System.out.println("No such user found!!!!");
+                    return new ResponseEntity(Map.of("timestamp",LocalDate.now(), "error", "Bad Request", "path", "/api/acct/payments", "message", "no such user", "status", 400), HttpStatus.BAD_REQUEST);
+                }
+
+                PaySlip paySlip = new PaySlip(s, user);
+                if (user.getMonths().contains(paySlip.getPeriod()))
+                    return new ResponseEntity(Map.of("timestamp",LocalDate.now(), "error", "Bad Request", "path", "/api/acct/payments", "message", "Duplicated entry in payment list", "status", 400), HttpStatus.BAD_REQUEST);
+                paySlipServiceImp.save(paySlip);
+
+                System.out.println("\n****PRINTING PAYSLIP****\n\n");
+                System.out.println(paySlip.getName());
+                System.out.println(paySlip.getLastname());
+                System.out.println(paySlip.getPeriod());
+                System.out.println(paySlip.getSalary());
+                System.out.println("***************************\n");
+                user.addPayslip(paySlip);
+                user.addMonth(paySlip.getPeriod());
+                userServiceImp.save(user);
+            }
+            catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+        return new ResponseEntity(Map.of("status", "Added successfully!"), HttpStatus.OK);
+    }
+
+
+    @PutMapping ("api/acct/payments")
+    public ResponseEntity EditPayments(@RequestBody Salary s){
+
+        System.out.println("\n\nINSIDE PUT api/acct/payments\n\n");
+
+        String error = Salary.parsePayments(s);
+        User user = userServiceImp.findByEmail(s.getEmployee());
+
+        if(error.length() > 0 || user == null) {
+            return new ResponseEntity(Map.of("timestamp",LocalDate.now(), "error", "Bad Request", "path", "/api/acct/payments", "message", error, "status", 400), HttpStatus.BAD_REQUEST);
+        }
+        PaySlip newPaySlip = new PaySlip(s, user);
+
+        List<PaySlip> allPaySlips = user.getPaySlips();
+        for(PaySlip p : allPaySlips) {
+            if(p.getPeriod().equals(newPaySlip.getPeriod())) {
+                newPaySlip.setId(p.getId());
+                paySlipServiceImp.save(newPaySlip);
+                return new ResponseEntity(Map.of("status", "Updated successfully!"), HttpStatus.OK);
+
+            }
+        }
+        user.addPayslip(newPaySlip);
+        paySlipServiceImp.save(newPaySlip);
+        userServiceImp.save(user);
+        return new ResponseEntity(Map.of("status", "Updated successfully!"), HttpStatus.OK);
     }
 
     private boolean uniqueEmail(String email) {
