@@ -17,7 +17,7 @@ import java.util.List;
 @Setter
 @Entity
 @Table(name="User")
-public class User {
+public class User implements Comparable<User>{
 
 
     @Id
@@ -52,14 +52,17 @@ public class User {
     @Size(max=2500)
     private ArrayList<String> months;
 
+    @Basic
+    private ArrayList<String> roles;
 
     public User(){
         months = new ArrayList<String>();
         paySlips = new ArrayList<PaySlip>();
         number = new GeneralSequenceNumber();
+        roles = new ArrayList<>();
     }
 
-    public User(String name, String lastname, String email, String password, ArrayList<PaySlip> paySlips, ArrayList<String> months) {
+    public User(String name, String lastname, String email, String password, ArrayList<PaySlip> paySlips, ArrayList<String> months, ArrayList<String> roles) {
         this.name = name;
         this.lastname = lastname;
         this.email = email;
@@ -67,6 +70,7 @@ public class User {
         this.paySlips = paySlips;
         number = new GeneralSequenceNumber();
         this.months = months;
+        this.roles = roles;
     }
 
     public void setId(Long id) {
@@ -91,6 +95,21 @@ public class User {
                 email != null && password != null &&
                 name.length() > 0 && lastname.length() > 0 &&
                 password.length() > 0 && email.endsWith("@acme.com");
+    }
+
+
+    public void addRole(String role) {
+
+        roles.add(role);
+    }
+
+    public static void sortRoles(List<String> roles){
+
+    }
+
+    @Override
+    public int compareTo(User u) {
+        return (int) (this.id - u.getId());
     }
 
 }

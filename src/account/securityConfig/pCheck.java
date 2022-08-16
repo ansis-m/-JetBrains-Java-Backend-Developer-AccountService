@@ -7,6 +7,8 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
+//Class with breached passwords//
+
 public class pCheck {
 
     public static Set<String> breachedPasswords = new HashSet(Arrays.asList("PasswordForJanuary", "PasswordForFebruary", "PasswordForMarch", "PasswordForApril",

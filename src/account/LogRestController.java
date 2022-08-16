@@ -9,6 +9,7 @@ import account.user.UserServiceImp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
@@ -48,6 +49,11 @@ public class LogRestController {
             if(uniqueEmail(user.getEmail()) && pCheck.isValid(user.getPassword())){
                 System.out.println("SAVED!!!\n");
                 user.setPassword(encoder.encode(user.getPassword()));
+                long i = userServiceImp.getCount();
+                if(i == 0)
+                    user.addRole("ROLE_ADMIN");
+                else
+                    user.addRole("ROLE_USER");
                 userServiceImp.save(user);
                 User savedUser = userServiceImp.findByEmail(user.getEmail());
                 savedUser.setId(savedUser.getNumber().getNumber());
@@ -200,5 +206,14 @@ public class LogRestController {
 
         userServiceImp.deleteAll();
         return new ResponseEntity(HttpStatus.OK);
+    }
+
+//    @Secured({ "ROLE_ADMIN" , "ROLE_USER"})
+    @GetMapping ("api/admin")
+    public ResponseEntity Hello(Authentication auth){
+
+        System.out.println("authorities: " + auth.getAuthorities());
+        System.out.println("credentials: " + auth.getCredentials());
+        return new ResponseEntity(Map.of("hello", "admin"), HttpStatus.OK);
     }
 }

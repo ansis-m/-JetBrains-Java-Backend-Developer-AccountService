@@ -57,6 +57,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.POST, "/api/signup").permitAll()
                 .mvcMatchers(HttpMethod.POST, "/api/auth/signup", "/api/acct/payments", "/actuator/shutdown").permitAll()
                 .mvcMatchers(HttpMethod.PUT, "/api/acct/payments").permitAll()
+                .mvcMatchers(HttpMethod.GET, "/api/admin").hasRole("ADMIN")
                 .mvcMatchers("/**").authenticated()
                 .and()
                 .sessionManagement()

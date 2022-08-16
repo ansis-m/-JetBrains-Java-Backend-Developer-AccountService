@@ -14,4 +14,6 @@ public interface UserService {
     boolean exists(String email);
     User findUserByUsername(String username);
     void deleteAll();
+
+    long getCount();
 }
