@@ -12,6 +12,8 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.access.AccessDeniedHandler;
+import org.springframework.security.web.authentication.AuthenticationFailureHandler;
 
 
 @Configuration
@@ -29,6 +31,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     public PasswordEncoder getEncoder() {
 //        return NoOpPasswordEncoder.getInstance();
         return new BCryptPasswordEncoder(13);
+    }
+
+    @Bean
+    public AccessDeniedHandler accessDeniedHandler() {
+        return new CustomAccessDeniedHandler();
     }
 
 
@@ -57,12 +64,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.POST, "/api/signup").permitAll()
                 .mvcMatchers(HttpMethod.POST, "/api/auth/signup", "/api/acct/payments", "/actuator/shutdown").permitAll()
                 .mvcMatchers(HttpMethod.PUT, "/api/acct/payments").permitAll()
-                .mvcMatchers(HttpMethod.GET, "/api/admin").hasRole("ADMIN")
+                //.mvcMatchers(HttpMethod.GET, "/api/admin").hasRole("ADMIN")
                 .mvcMatchers("/**").authenticated()
                 .and()
                 .sessionManagement()
-                .sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+                .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+                .and().exceptionHandling()
+                .accessDeniedHandler(accessDeniedHandler());
+
     }
-
-
 }

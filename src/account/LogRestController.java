@@ -195,7 +195,15 @@ public class LogRestController {
 
 
     @GetMapping ("api/get")
-    public ResponseEntity Signup(){
+    public ResponseEntity GetAll(){
+
+        return new ResponseEntity(userServiceImp.getAll(), HttpStatus.OK);
+
+    }
+
+    @Secured({ "ROLE_ADMIN"})
+    @GetMapping ("api/admin/user")
+    public ResponseEntity users(){
 
         return new ResponseEntity(userServiceImp.getAll(), HttpStatus.OK);
 
@@ -208,7 +216,7 @@ public class LogRestController {
         return new ResponseEntity(HttpStatus.OK);
     }
 
-//    @Secured({ "ROLE_ADMIN" , "ROLE_USER"})
+    @Secured({ "ROLE_ADMIN"})
     @GetMapping ("api/admin")
     public ResponseEntity Hello(Authentication auth){
 
