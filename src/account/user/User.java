@@ -10,6 +10,7 @@ import lombok.Setter;
 import javax.persistence.*;
 import javax.validation.constraints.Size;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 
@@ -103,8 +104,8 @@ public class User implements Comparable<User>{
         roles.add(role);
     }
 
-    public static void sortRoles(List<String> roles){
-
+    public void sortRoles(){
+        Collections.sort(this.roles);
     }
 
     @Override
