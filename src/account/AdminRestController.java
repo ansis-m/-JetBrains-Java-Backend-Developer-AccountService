@@ -1,5 +1,6 @@
 package account;
 
+import account.SecurityEvents.EventService;
 import account.user.User;
 import account.user.UserServiceImp;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +21,9 @@ public class AdminRestController {
 
     @Autowired
     PasswordEncoder encoder;
+
+    @Autowired
+    EventService eventService;
 
     @Secured({"ROLE_ADMINISTRATOR"})
     @GetMapping ("api/admin/user")
@@ -72,7 +76,7 @@ public class AdminRestController {
             return new ResponseEntity(response, HttpStatus.NOT_FOUND);
         }
 
-        if (!instructions.get("role").equals("USER") && !instructions.get("role").equals("ADMINISTRATOR") && !instructions.get("role").equals("ACCOUNTANT")) {
+        if (!instructions.get("role").equals("USER") && !instructions.get("role").equals("ADMINISTRATOR") && !instructions.get("role").equals("ACCOUNTANT") && !instructions.get("role").equals("AUDITOR")) {
             response.put("error", "Not Found");
             response.put("status", 404);
             response.put("message", "Role not found!");

@@ -1,5 +1,6 @@
 package account;
 
+import account.SecurityEvents.EventService;
 import account.payslip.PaySlip;
 import account.payslip.PaySlipServiceImp;
 import account.securityConfig.pCheck;
@@ -22,6 +23,9 @@ public class UserRestController {
 
     @Autowired
     UserServiceImp userServiceImp;
+
+    @Autowired
+    EventService eventService;
 
     @Autowired
     PasswordEncoder encoder;
