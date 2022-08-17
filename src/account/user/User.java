@@ -56,7 +56,7 @@ public class User implements Comparable<User>{
     @Basic
     private ArrayList<String> roles;
 
-    //@JsonIgnore
+    @JsonIgnore
     @Column
     private Boolean active;
 

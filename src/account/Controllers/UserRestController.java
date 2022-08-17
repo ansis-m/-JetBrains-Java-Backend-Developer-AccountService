@@ -1,4 +1,4 @@
-package account;
+package account.Controllers;
 
 import account.SecurityEvents.Event;
 import account.SecurityEvents.EventService;

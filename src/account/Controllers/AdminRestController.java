@@ -1,5 +1,6 @@
-package account;
+package account.Controllers;
 
+import account.SecurityEvents.Event;
 import account.SecurityEvents.EventService;
 import account.user.User;
 import account.user.UserService;
@@ -8,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.annotation.Secured;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
@@ -29,7 +31,7 @@ public class AdminRestController {
 
     @Secured({"ROLE_ADMINISTRATOR"})
     @PutMapping ("api/admin/user/access")
-    public ResponseEntity lock(@RequestBody Map<String, String> account){
+    public ResponseEntity lock(@RequestBody Map<String, String> account, Authentication auth){
 
         System.out.println("\n\n*******Inside api/admin/user/access******\n");
 
@@ -50,11 +52,15 @@ public class AdminRestController {
             else if (account.get("operation").equals("LOCK")){
                 user.setActive(false);
                 userService.save(user);
+                Event event = new Event("LOCK_USER", auth.getName(), user.getEmail(), "/api/admin/user/access");
+                eventService.save(event);
                 return new ResponseEntity(Map.of("status", "User " + user.getEmail() + " locked!"), HttpStatus.OK);
             }
             else if (account.get("operation").equals("UNLOCK")){
                 user.setActive(true);
                 userService.save(user);
+                userService.save(user);
+                Event event = new Event("UNLOCK_USER", auth.getName(), user.getEmail(), "/api/admin/user/access");
                 return new ResponseEntity(Map.of("status", "User " + user.getEmail() + " unlocked!"), HttpStatus.OK);
             }
         }
@@ -75,7 +81,7 @@ public class AdminRestController {
 
     @Secured({"ROLE_ADMINISTRATOR"})
     @DeleteMapping(value = {"api/admin/user/{email}", "api/admin/user"})
-    public ResponseEntity deleteUser(@PathVariable(required = false) String email){
+    public ResponseEntity deleteUser(@PathVariable(required = false) String email, Authentication auth){
 
         System.out.println("\n\n*******Inside api/admin/user/{email}\n\n");
 
@@ -85,6 +91,8 @@ public class AdminRestController {
             if(user.getRoles().contains("ROLE_ADMINISTRATOR"))
                 return new ResponseEntity(Map.of("timestamp",LocalDate.now(), "error", "Bad Request", "path", "/api/admin/user/" + email, "message", "Can't remove ADMINISTRATOR role!", "status", 400), HttpStatus.BAD_REQUEST);
             userService.deleteByEmail(email);
+            Event event = new Event("DELETE_USER", auth.getName(),user.getEmail(), "/api/admin/user");
+            eventService.save(event);
             return new ResponseEntity(Map.of("user", email, "status", "Deleted successfully!"), HttpStatus.OK);
         }
         else
@@ -93,7 +101,7 @@ public class AdminRestController {
 
     @Secured({"ROLE_ADMINISTRATOR"})
     @PutMapping ("api/admin/user/role")
-    public ResponseEntity addRole(@RequestBody (required = false) Map<String, String> instructions){
+    public ResponseEntity addRole(@RequestBody (required = false) Map<String, String> instructions, Authentication auth){
 
 
         System.out.println("\n********api/admin/user/role***********\n\n");
@@ -135,6 +143,8 @@ public class AdminRestController {
                 user.sortRoles();
                 userService.save(user);
             }
+            Event event = new Event("GRANT_ROLE", auth.getName(), "Grant role " + instructions.get("role") + " to " + user.getEmail(), "/api/admin/user/role");
+            eventService.save(event);
             return new ResponseEntity(user, HttpStatus.OK);
         }
         else if (instructions.get("operation").equals("REMOVE")) {
@@ -160,6 +170,8 @@ public class AdminRestController {
                 user.getRoles().remove("ROLE_" + instructions.get("role"));
                 user.sortRoles();
                 userService.save(user);
+                Event event = new Event("REMOVE_ROLE", auth.getName(), "Remove role " + instructions.get("role") + " to " + user.getEmail(), "/api/admin/user/role");
+                eventService.save(event);
                 return new ResponseEntity(user, HttpStatus.OK);
             }
         }

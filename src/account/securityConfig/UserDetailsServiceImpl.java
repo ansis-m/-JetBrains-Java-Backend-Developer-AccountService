@@ -1,5 +1,6 @@
 package account.securityConfig;
 
+import account.SecurityEvents.Event;
 import account.user.User;
 import account.user.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +23,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         User user = userRepo.findUserByEmail(email.toLowerCase());
 
         if (user == null) {
+
             throw new UsernameNotFoundException("Not found: " + email);
         }
 

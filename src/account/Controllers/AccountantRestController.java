@@ -1,4 +1,4 @@
-package account;
+package account.Controllers;
 
 import account.SecurityEvents.EventService;
 import account.payslip.PaySlip;

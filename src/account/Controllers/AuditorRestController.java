@@ -1,4 +1,4 @@
-package account;
+package account.Controllers;
 
 import account.SecurityEvents.EventService;
 import account.SecurityEvents.EventServiceImp;
@@ -29,7 +29,7 @@ public class AuditorRestController {
 
         System.out.println("\n\n*******Inside api/security/events**********\n\n");
 
-        return new ResponseEntity(Map.of("timestamp", LocalDate.now(), "error", "Not Found", "path", "/api/admin/user/" + email, "message", "User not found!", "status", 404), HttpStatus.NOT_FOUND);
+        return new ResponseEntity(eventService.getAll(), HttpStatus.OK);
 
     }
 }
