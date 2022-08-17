@@ -2,6 +2,7 @@ package account;
 
 import account.SecurityEvents.EventService;
 import account.user.User;
+import account.user.UserService;
 import account.user.UserServiceImp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -17,7 +18,7 @@ import java.util.*;
 public class AdminRestController {
 
     @Autowired
-    UserServiceImp userServiceImp;
+    UserService userService;
 
     @Autowired
     PasswordEncoder encoder;
@@ -25,11 +26,50 @@ public class AdminRestController {
     @Autowired
     EventService eventService;
 
+
+    @Secured({"ROLE_ADMINISTRATOR"})
+    @PutMapping ("api/admin/user/access")
+    public ResponseEntity lock(@RequestBody Map<String, String> account){
+
+        System.out.println("\n\n*******Inside api/admin/user/access******\n");
+
+        System.out.println("user:  " + account.get("user"));
+        System.out.println("operation: " + account.get("operation"));
+
+        System.out.println("*********************");
+
+
+        try{
+            User user = userService.findByEmail(account.get("user"));
+            if(user == null) {
+                return new ResponseEntity(Map.of("timestamp", LocalDate.now(), "status", 400, "error", "Bad Request", "path", "/api/admin/user/access", "message", "User not found!"), HttpStatus.BAD_REQUEST);
+            }
+            if(user.getRoles().contains("ROLE_ADMINISTRATOR")) {
+                return new ResponseEntity(Map.of("timestamp", LocalDate.now(), "status", 400, "error", "Bad Request", "path", "/api/admin/user/access", "message", "Can't lock the ADMINISTRATOR!"), HttpStatus.BAD_REQUEST);
+            }
+            else if (account.get("operation").equals("LOCK")){
+                user.setActive(false);
+                userService.save(user);
+                return new ResponseEntity(Map.of("status", "User " + user.getEmail() + " locked!"), HttpStatus.OK);
+            }
+            else if (account.get("operation").equals("UNLOCK")){
+                user.setActive(true);
+                userService.save(user);
+                return new ResponseEntity(Map.of("status", "User " + user.getEmail() + " unlocked!"), HttpStatus.OK);
+            }
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        return new ResponseEntity(Map.of("timestamp", LocalDate.now(), "status", 400, "error", "Bad Request", "path", "/api/admin/user/access", "message", "Bad request body!"), HttpStatus.BAD_REQUEST);
+    }
+
+
     @Secured({"ROLE_ADMINISTRATOR"})
     @GetMapping ("api/admin/user")
     public ResponseEntity users(){
 
-        return new ResponseEntity(userServiceImp.getAll(), HttpStatus.OK);
+        return new ResponseEntity(userService.getAll(), HttpStatus.OK);
 
     }
 
@@ -39,12 +79,12 @@ public class AdminRestController {
 
         System.out.println("\n\n*******Inside api/admin/user/{email}\n\n");
 
-        if(userServiceImp.exists(email)) {
+        if(userService.exists(email)) {
 
-            User user = userServiceImp.findByEmail(email);
+            User user = userService.findByEmail(email);
             if(user.getRoles().contains("ROLE_ADMINISTRATOR"))
                 return new ResponseEntity(Map.of("timestamp",LocalDate.now(), "error", "Bad Request", "path", "/api/admin/user/" + email, "message", "Can't remove ADMINISTRATOR role!", "status", 400), HttpStatus.BAD_REQUEST);
-            userServiceImp.deleteByEmail(email);
+            userService.deleteByEmail(email);
             return new ResponseEntity(Map.of("user", email, "status", "Deleted successfully!"), HttpStatus.OK);
         }
         else
@@ -68,7 +108,7 @@ public class AdminRestController {
         response.put("timestamp", LocalDate.now());
         response.put("path", "/api/admin/user/role");
 
-        User user = userServiceImp.findByEmail(instructions.get("user").toLowerCase());
+        User user = userService.findByEmail(instructions.get("user").toLowerCase());
         if (user == null) {
             response.put("error", "Not Found");
             response.put("status", 404);
@@ -93,7 +133,7 @@ public class AdminRestController {
                     return new ResponseEntity(response, HttpStatus.BAD_REQUEST);
                 }
                 user.sortRoles();
-                userServiceImp.save(user);
+                userService.save(user);
             }
             return new ResponseEntity(user, HttpStatus.OK);
         }
@@ -119,7 +159,7 @@ public class AdminRestController {
             else {
                 user.getRoles().remove("ROLE_" + instructions.get("role"));
                 user.sortRoles();
-                userServiceImp.save(user);
+                userService.save(user);
                 return new ResponseEntity(user, HttpStatus.OK);
             }
         }
@@ -129,14 +169,14 @@ public class AdminRestController {
     @GetMapping ("api/delete/all")
     public ResponseEntity Clean(){
 
-        userServiceImp.deleteAll();
+        userService.deleteAll();
         return new ResponseEntity(HttpStatus.OK);
     }
 
     @GetMapping ("api/get")
     public ResponseEntity GetAll(){
 
-        return new ResponseEntity(userServiceImp.getAll(), HttpStatus.OK);
+        return new ResponseEntity(userService.getAll(), HttpStatus.OK);
 
     }
 }

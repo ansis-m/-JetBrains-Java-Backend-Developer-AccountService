@@ -2,10 +2,12 @@ package account;
 
 import account.SecurityEvents.EventService;
 import account.payslip.PaySlip;
+import account.payslip.PaySlipService;
 import account.payslip.PaySlipServiceImp;
 import account.securityConfig.pCheck;
 import account.user.Salary;
 import account.user.User;
+import account.user.UserService;
 import account.user.UserServiceImp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -22,13 +24,13 @@ import java.util.*;
 public class AccountantRestController {
 
     @Autowired
-    UserServiceImp userServiceImp;
+    UserService userService;
 
     @Autowired
     EventService eventService;
 
     @Autowired
-    PaySlipServiceImp paySlipServiceImp;
+    PaySlipService paySlipService;
 
     @Secured({ "ROLE_USER", "ROLE_ACCOUNTANT"})
     @GetMapping("api/empl/payment")
@@ -37,7 +39,7 @@ public class AccountantRestController {
 
         System.out.println("\n\n******PAYMENT********\n" + auth.getName());
 
-        User user = userServiceImp.findByEmail(auth.getName());
+        User user = userService.findByEmail(auth.getName());
         if(user != null) {
             ArrayList<PaySlip> payslips = new ArrayList<>(user.getPaySlips());
             Collections.reverse(payslips);
@@ -70,7 +72,7 @@ public class AccountantRestController {
 
         for(Salary s : salary) {
             try{
-                User user = userServiceImp.findByEmail(s.getEmployee());
+                User user = userService.findByEmail(s.getEmployee());
                 if(user == null) {
                     System.out.println("No such user found!!!!");
                     return new ResponseEntity(Map.of("timestamp",LocalDate.now(), "error", "Bad Request", "path", "/api/acct/payments", "message", "no such user", "status", 400), HttpStatus.BAD_REQUEST);
@@ -79,11 +81,11 @@ public class AccountantRestController {
                 PaySlip paySlip = new PaySlip(s, user);
                 if (user.getMonths().contains(paySlip.getPeriod()))
                     return new ResponseEntity(Map.of("timestamp",LocalDate.now(), "error", "Bad Request", "path", "/api/acct/payments", "message", "Duplicated entry in payment list", "status", 400), HttpStatus.BAD_REQUEST);
-                paySlipServiceImp.save(paySlip);
+                paySlipService.save(paySlip);
 
                 user.addPayslip(paySlip);
                 user.addMonth(paySlip.getPeriod());
-                userServiceImp.save(user);
+                userService.save(user);
             }
             catch (Exception e) {
                 e.printStackTrace();
@@ -102,7 +104,7 @@ public class AccountantRestController {
             System.out.println("\n\ns == null\n\n");
 
         String error = Salary.parsePayments(s);
-        User user = userServiceImp.findByEmail(s.getEmployee());
+        User user = userService.findByEmail(s.getEmployee());
 
         if(error.length() > 0 || user == null) {
             return new ResponseEntity(Map.of("timestamp",LocalDate.now(), "error", "Bad Request", "path", "/api/acct/payments", "message", error, "status", 400), HttpStatus.BAD_REQUEST);
@@ -113,19 +115,19 @@ public class AccountantRestController {
         for(PaySlip p : allPaySlips) {
             if(p.getPeriod().equals(newPaySlip.getPeriod())) {
                 newPaySlip.setId(p.getId());
-                paySlipServiceImp.save(newPaySlip);
+                paySlipService.save(newPaySlip);
                 return new ResponseEntity(Map.of("status", "Updated successfully!"), HttpStatus.OK);
 
             }
         }
         user.addPayslip(newPaySlip);
-        paySlipServiceImp.save(newPaySlip);
-        userServiceImp.save(user);
+        paySlipService.save(newPaySlip);
+        userService.save(user);
         return new ResponseEntity(Map.of("status", "Updated successfully!"), HttpStatus.OK);
     }
 
     private boolean uniqueEmail(String email) {
-        return !userServiceImp.exists(email);
+        return !userService.exists(email);
     }
 
 }

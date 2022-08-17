@@ -56,14 +56,19 @@ public class User implements Comparable<User>{
     @Basic
     private ArrayList<String> roles;
 
+    //@JsonIgnore
+    @Column
+    private boolean active;
+
     public User(){
         months = new ArrayList<String>();
         paySlips = new ArrayList<PaySlip>();
         number = new GeneralSequenceNumber();
         roles = new ArrayList<>();
+        active = true;
     }
 
-    public User(String name, String lastname, String email, String password, ArrayList<PaySlip> paySlips, ArrayList<String> months, ArrayList<String> roles) {
+    public User(String name, String lastname, String email, String password, ArrayList<PaySlip> paySlips, ArrayList<String> months, ArrayList<String> roles, boolean active) {
         this.name = name;
         this.lastname = lastname;
         this.email = email;
@@ -72,6 +77,7 @@ public class User implements Comparable<User>{
         number = new GeneralSequenceNumber();
         this.months = months;
         this.roles = roles;
+        this.active = active;
     }
 
     public void setId(Long id) {
