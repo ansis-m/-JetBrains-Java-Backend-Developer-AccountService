@@ -124,11 +124,4 @@ public class AccountantRestController {
         return !userServiceImp.exists(email);
     }
 
-
-    @GetMapping ("api/get")
-    public ResponseEntity GetAll(){
-
-        return new ResponseEntity(userServiceImp.getAll(), HttpStatus.OK);
-
-    }
 }
