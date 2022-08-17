@@ -58,14 +58,14 @@ public class User implements Comparable<User>{
 
     //@JsonIgnore
     @Column
-    private boolean active;
+    private Boolean active;
 
     public User(){
         months = new ArrayList<String>();
         paySlips = new ArrayList<PaySlip>();
         number = new GeneralSequenceNumber();
         roles = new ArrayList<>();
-        active = true;
+        active = new Boolean(true);
     }
 
     public User(String name, String lastname, String email, String password, ArrayList<PaySlip> paySlips, ArrayList<String> months, ArrayList<String> roles, boolean active) {

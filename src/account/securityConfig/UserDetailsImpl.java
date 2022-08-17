@@ -21,7 +21,7 @@ public class UserDetailsImpl implements UserDetails {
     UserDetailsImpl(User user) {
         this.email = user.getEmail();
         this.password = user.getPassword();
-        this.active = user.isActive();
+        this.active = user.getActive();
         rolesAndAuthorities = new ArrayList<GrantedAuthority>();
         for(String r : user.getRoles())
             rolesAndAuthorities.add(new SimpleGrantedAuthority(r));
