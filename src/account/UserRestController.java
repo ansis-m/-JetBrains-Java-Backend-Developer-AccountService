@@ -1,16 +1,14 @@
 package account;
 
+import account.SecurityEvents.Event;
 import account.SecurityEvents.EventService;
-import account.payslip.PaySlip;
-import account.payslip.PaySlipServiceImp;
 import account.securityConfig.pCheck;
-import account.user.Salary;
 import account.user.User;
+import account.user.UserService;
 import account.user.UserServiceImp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.annotation.Secured;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
@@ -22,7 +20,7 @@ import java.util.*;
 public class UserRestController {
 
     @Autowired
-    UserServiceImp userServiceImp;
+    UserService userService;
 
     @Autowired
     EventService eventService;
@@ -42,20 +40,24 @@ public class UserRestController {
         System.out.println(user.getEmail());
         System.out.println(user.getPassword() + "\n********************");
 
+
         if(user.valid()) {
             user.setEmail(user.getEmail().toLowerCase());
             if(uniqueEmail(user.getEmail()) && pCheck.isValid(user.getPassword())){
                 System.out.println("SAVED!!!\n");
                 user.setPassword(encoder.encode(user.getPassword()));
-                long i = userServiceImp.getCount();
+                long i = userService.getCount();
                 if(i == 0)
                     user.addRole("ROLE_ADMINISTRATOR");
                 else
                     user.addRole("ROLE_USER");
-                userServiceImp.save(user);
-                User savedUser = userServiceImp.findByEmail(user.getEmail());
+                userService.save(user);
+                User savedUser = userService.findByEmail(user.getEmail());
                 savedUser.setId(savedUser.getNumber().getNumber());
-                userServiceImp.save(savedUser);
+                userService.save(savedUser);
+
+                Event event = new Event("CREATE_USER", "Anonymous", savedUser.getEmail(), "/api/auth/signup");
+                eventService.save(event);
 
                 return new ResponseEntity(savedUser, HttpStatus.OK);
             }
@@ -77,7 +79,7 @@ public class UserRestController {
         System.out.println(password.get("new_password"));
 
         System.out.println(auth.getName());
-        User user = userServiceImp.findByEmail(auth.getName());
+        User user = userService.findByEmail(auth.getName());
 
         System.out.println("\n******************\n\n");
 
@@ -95,14 +97,16 @@ public class UserRestController {
         }
         else {
             user.setPassword(encoder.encode(password.get("new_password")));
-            userServiceImp.save(user);
+            userService.save(user);
+            Event event = new Event("CHANGE_PASSWORD", user.getEmail(), user.getEmail(), "/api/auth/changepass");
+            eventService.save(event);
             return new ResponseEntity(Map.of("email", user.getEmail(), "status", "The password has been updated successfully"), HttpStatus.OK);
         }
     }
 
 
     private boolean uniqueEmail(String email) {
-        return !userServiceImp.exists(email);
+        return !userService.exists(email);
     }
 
 }
