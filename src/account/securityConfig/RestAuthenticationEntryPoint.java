@@ -23,13 +23,17 @@ public class RestAuthenticationEntryPoint implements AuthenticationEntryPoint {
     @Override
     public void commence(HttpServletRequest request, HttpServletResponse response, AuthenticationException authException) throws IOException, ServletException {
 
-
-        String encoded = request.getHeader("Authorization");
-        String decoded = new String(Base64.getDecoder().decode(encoded.split(" ")[1]));
-        String formatted = decoded.split(":")[0];
-
-        Event event = new Event("LOGIN_FAILED",  formatted == null? "Anonymous" : formatted, request.getRequestURI(), request.getRequestURI());
-        eventService.save(event);
+        try {
+            String encoded = request.getHeader("Authorization");
+            String decoded = new String(Base64.getDecoder().decode(encoded.split(" ")[1]));
+            String formatted = decoded.split(":")[0];
+            Event event = new Event("LOGIN_FAILED",  formatted == "null"? "Anonymous" : formatted, request.getRequestURI(), request.getRequestURI());
+            eventService.save(event);
+        }
+        catch (Exception e) {
+            System.out.println("\n\n***FAILED LOGIN, FAILED LOGGING***\n\n");
+            //e.printStackTrace();
+        }
 
         System.out.println("\n\n\n***** EntryPoint - failed Login *****\n\n\n");
 

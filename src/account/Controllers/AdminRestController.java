@@ -170,7 +170,7 @@ public class AdminRestController {
                 user.getRoles().remove("ROLE_" + instructions.get("role"));
                 user.sortRoles();
                 userService.save(user);
-                Event event = new Event("REMOVE_ROLE", auth.getName(), "Remove role " + instructions.get("role") + " to " + user.getEmail(), "/api/admin/user/role");
+                Event event = new Event("REMOVE_ROLE", auth.getName(), "Remove role " + instructions.get("role") + " from " + user.getEmail(), "/api/admin/user/role");
                 eventService.save(event);
                 return new ResponseEntity(user, HttpStatus.OK);
             }
