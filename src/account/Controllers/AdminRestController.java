@@ -33,12 +33,12 @@ public class AdminRestController {
     @PutMapping ("api/admin/user/access")
     public ResponseEntity lock(@RequestBody Map<String, String> account, Authentication auth){
 
-        System.out.println("\n\n*******Inside api/admin/user/access******\n");
-
-        System.out.println("user:  " + account.get("user"));
-        System.out.println("operation: " + account.get("operation"));
-
-        System.out.println("*********************");
+//        System.out.println("\n\n*******Inside api/admin/user/access******\n");
+//
+//        System.out.println("user:  " + account.get("user"));
+//        System.out.println("operation: " + account.get("operation"));
+//
+//        System.out.println("*********************");
 
 
         try{
@@ -52,7 +52,7 @@ public class AdminRestController {
             else if (account.get("operation").equals("LOCK")){
                 user.setActive(false);
                 userService.save(user);
-                Event event = new Event("LOCK_USER", auth.getName(), user.getEmail(), "/api/admin/user/access");
+                Event event = new Event("LOCK_USER", auth.getName(), "Lock user " + user.getEmail(), "/api/admin/user/access");
                 eventService.save(event);
                 return new ResponseEntity(Map.of("status", "User " + user.getEmail() + " locked!"), HttpStatus.OK);
             }
@@ -60,7 +60,8 @@ public class AdminRestController {
                 user.setActive(true);
                 user.setFailedAttempts(0);
                 userService.save(user);
-                Event event = new Event("UNLOCK_USER", auth.getName(), user.getEmail(), "/api/admin/user/access");
+                Event event = new Event("UNLOCK_USER", auth.getName(), "Unlock user " + user.getEmail(), "/api/admin/user/access");
+                eventService.save(event);
                 return new ResponseEntity(Map.of("status", "User " + user.getEmail() + " unlocked!"), HttpStatus.OK);
             }
         }
@@ -104,13 +105,13 @@ public class AdminRestController {
     public ResponseEntity addRole(@RequestBody (required = false) Map<String, String> instructions, Authentication auth){
 
 
-        System.out.println("\n********api/admin/user/role***********\n\n");
-        if(instructions == null)
-            System.out.println("\nNO REQUEST BODY\n");
-
-        System.out.println(instructions.get("user"));
-        System.out.println(instructions.get("role"));
-        System.out.println(instructions.get("operation"));
+//        System.out.println("\n********api/admin/user/role***********\n\n");
+//        if(instructions == null)
+//            System.out.println("\nNO REQUEST BODY\n");
+//
+//        System.out.println(instructions.get("user"));
+//        System.out.println(instructions.get("role"));
+//        System.out.println(instructions.get("operation"));
 
         Map response = new HashMap<>();
         response.put("timestamp", LocalDate.now());

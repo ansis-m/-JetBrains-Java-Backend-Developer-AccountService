@@ -32,8 +32,14 @@ public class AuditorRestController {
 
 
         int i = 1;
-        for(Event e : eventService.getAll())
-            System.out.println(i++ + e.toString());
+        for(Event e : eventService.getAll()) {
+            System.out.println(i++ + " id: " + e.getId());
+            System.out.println("action: " + e.getAction());
+            System.out.println("object: " + e.getObject());
+            System.out.println("subject: " + e.getSubject());
+            System.out.println("path: " + e.getPath());
+        }
+
 
         return new ResponseEntity(eventService.getAll(), HttpStatus.OK);
 

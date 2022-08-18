@@ -74,14 +74,9 @@ public class UserRestController {
     @PostMapping("api/auth/changepass")
     public ResponseEntity ChangePassword(@RequestBody Map<String, String> password, Authentication auth){
 
-        System.out.println("\nChangePassword\n\n");
         String message;
-        System.out.println(password.get("new_password"));
 
-        System.out.println(auth.getName());
         User user = userService.findByEmail(auth.getName());
-
-        System.out.println("\n******************\n\n");
 
         if (password.get("new_password") == null || password.get("new_password").length() < 12) {
             message = "Password length must be 12 chars minimum!";
