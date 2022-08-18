@@ -42,7 +42,7 @@ public class AdminRestController {
 
 
         try{
-            User user = userService.findByEmail(account.get("user"));
+            User user = userService.findByEmail(account.get("user").toLowerCase());
             if(user == null) {
                 return new ResponseEntity(Map.of("timestamp", LocalDate.now(), "status", 400, "error", "Bad Request", "path", "/api/admin/user/access", "message", "User not found!"), HttpStatus.BAD_REQUEST);
             }
