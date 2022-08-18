@@ -60,7 +60,12 @@ public class User implements Comparable<User>{
     @Column
     private Boolean active;
 
+    @JsonIgnore
+    @Column
+    private Integer failedAttempts;
+
     public User(){
+        failedAttempts = 0;
         months = new ArrayList<String>();
         paySlips = new ArrayList<PaySlip>();
         number = new GeneralSequenceNumber();
@@ -68,16 +73,8 @@ public class User implements Comparable<User>{
         active = new Boolean(true);
     }
 
-    public User(String name, String lastname, String email, String password, ArrayList<PaySlip> paySlips, ArrayList<String> months, ArrayList<String> roles, boolean active) {
-        this.name = name;
-        this.lastname = lastname;
-        this.email = email;
-        this.password = password;
-        this.paySlips = paySlips;
-        number = new GeneralSequenceNumber();
-        this.months = months;
-        this.roles = roles;
-        this.active = active;
+    public void failedLogin(){
+        failedAttempts++;
     }
 
     public void setId(Long id) {
