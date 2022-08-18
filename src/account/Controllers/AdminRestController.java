@@ -58,7 +58,7 @@ public class AdminRestController {
             }
             else if (account.get("operation").equals("UNLOCK")){
                 user.setActive(true);
-                userService.save(user);
+                user.setFailedAttempts(0);
                 userService.save(user);
                 Event event = new Event("UNLOCK_USER", auth.getName(), user.getEmail(), "/api/admin/user/access");
                 return new ResponseEntity(Map.of("status", "User " + user.getEmail() + " unlocked!"), HttpStatus.OK);

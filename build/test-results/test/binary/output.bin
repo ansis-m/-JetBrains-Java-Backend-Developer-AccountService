@@ -9,27 +9,27 @@
 * =========|_|==============|___/=/_/_/_/
 , :: Spring Boot ::        (v2.3.1.RELEASE)
 
-Ç2022-08-18 11:56:55.841  INFO 27708 --- [    Test worker] account.AccountServiceApplication        : Starting AccountServiceApplication on LAPTOP-VBFHQFG2 with PID 27708 (started by Ansis in C:\Users\Ansis\Desktop\maven\Account Service\Account Service\task)
-¶2022-08-18 11:56:55.845  INFO 27708 --- [    Test worker] account.AccountServiceApplication        : No active profile set, falling back to default profiles: default
-¢2022-08-18 11:56:56.969  INFO 27708 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-∫2022-08-18 11:56:57.035  INFO 27708 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58ms. Found 4 JPA repository interfaces.
-ß2022-08-18 11:56:57.385  INFO 27708 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@171dc7c3' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-∆2022-08-18 11:56:57.388  INFO 27708 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityConfig' of type [account.securityConfig.MethodSecurityConfig$$EnhancerBySpringCGLIB$$5a47c032] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-”2022-08-18 11:56:57.396  INFO 27708 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-ì2022-08-18 11:56:57.672  INFO 27708 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 28852 (http)
-2022-08-18 11:56:57.681  INFO 27708 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-ï2022-08-18 11:56:57.681  INFO 27708 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
-ò2022-08-18 11:56:57.771  INFO 27708 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-•2022-08-18 11:56:57.772  INFO 27708 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1879 ms
-Ä2022-08-18 11:56:57.913  INFO 27708 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-Ö2022-08-18 11:56:58.074  INFO 27708 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-ø2022-08-18 11:56:58.080  INFO 27708 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:../service_db'
-ú2022-08-18 11:56:58.240  INFO 27708 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-ü2022-08-18 11:56:58.283  INFO 27708 --- [         task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-ò2022-08-18 11:56:58.353  INFO 27708 --- [         task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.17.Final
-ù2022-08-18 11:56:58.393  WARN 27708 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-û2022-08-18 11:56:58.518  INFO 27708 --- [         task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-ü2022-08-18 11:56:58.655  INFO 27708 --- [         task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+Ç2022-08-18 12:52:06.351  INFO 24212 --- [    Test worker] account.AccountServiceApplication        : Starting AccountServiceApplication on LAPTOP-VBFHQFG2 with PID 24212 (started by Ansis in C:\Users\Ansis\Desktop\maven\Account Service\Account Service\task)
+¶2022-08-18 12:52:06.355  INFO 24212 --- [    Test worker] account.AccountServiceApplication        : No active profile set, falling back to default profiles: default
+¢2022-08-18 12:52:07.466  INFO 24212 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+∫2022-08-18 12:52:07.549  INFO 24212 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 73ms. Found 4 JPA repository interfaces.
+ß2022-08-18 12:52:07.940  INFO 24212 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@47a7c93e' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+∆2022-08-18 12:52:07.942  INFO 24212 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityConfig' of type [account.securityConfig.MethodSecurityConfig$$EnhancerBySpringCGLIB$$49e26583] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+”2022-08-18 12:52:07.951  INFO 24212 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ì2022-08-18 12:52:08.244  INFO 24212 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 28852 (http)
+2022-08-18 12:52:08.257  INFO 24212 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+ï2022-08-18 12:52:08.257  INFO 24212 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+ò2022-08-18 12:52:08.357  INFO 24212 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+•2022-08-18 12:52:08.357  INFO 24212 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1949 ms
+Ä2022-08-18 12:52:08.510  INFO 24212 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+Ö2022-08-18 12:52:08.698  INFO 24212 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+ø2022-08-18 12:52:08.705  INFO 24212 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:../service_db'
+ú2022-08-18 12:52:08.873  INFO 24212 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+ü2022-08-18 12:52:08.926  INFO 24212 --- [         task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+ò2022-08-18 12:52:09.000  INFO 24212 --- [         task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.17.Final
+ù2022-08-18 12:52:09.039  WARN 24212 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+û2022-08-18 12:52:09.186  INFO 24212 --- [         task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+ü2022-08-18 12:52:09.331  INFO 24212 --- [         task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
 ¨Hibernate: create table event (id bigint not null, action varchar(255), date varchar(255), object varchar(255), path varchar(255), subject varchar(255), primary key (id))
 KHibernate: create table id (number bigint not null, primary key (number))
 “Hibernate: create table pay_slip (id bigint not null, date varchar(255), lastname varchar(255), name varchar(255), period varchar(255), salary varchar(255), user_email varchar(255) not null, primary key (id))
@@ -37,17 +37,17 @@
 KHibernate: create sequence hibernate_sequence start with 1 increment by 1
 uHibernate: alter table pay_slip add constraint FK6iq3q6htw3itl605wlhkcjutn foreign key (user_email) references user
 hHibernate: alter table user add constraint FK3mi03cam43b65y2a7q2o4mbc0 foreign key (idd) references id
-Ÿ2022-08-18 11:56:59.417  INFO 27708 --- [         task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-©2022-08-18 11:56:59.426  INFO 27708 --- [         task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-õ2022-08-18 11:56:59.855  INFO 27708 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
-û2022-08-18 11:56:59.916  INFO 27708 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@b6136eb, org.springframework.security.web.context.SecurityContextPersistenceFilter@2295566b, org.springframework.security.web.header.HeaderWriterFilter@56f72909, org.springframework.security.web.authentication.logout.LogoutFilter@237aa0c7, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@3b66ac74, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@53a09566, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@32513dea, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2cce10bc, org.springframework.security.web.session.SessionManagementFilter@1d1b3620, org.springframework.security.web.access.ExceptionTranslationFilter@23ec63af, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@57839834]
-¢2022-08-18 11:57:00.184  INFO 27708 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 28852 (http) with context path ''
-ß2022-08-18 11:57:00.185  INFO 27708 --- [    Test worker] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories‚Ä¶
-ã2022-08-18 11:57:00.557  INFO 27708 --- [    Test worker] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
-∞2022-08-18 11:57:00.570  INFO 27708 --- [    Test worker] account.AccountServiceApplication        : Started AccountServiceApplication in 5.004 seconds (JVM running for 5.816)
-ü2022-08-18 11:57:00.892  INFO 27708 --- [io-28852-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-é2022-08-18 11:57:00.892  INFO 27708 --- [io-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-Ü2022-08-18 11:57:00.899  INFO 27708 --- [io-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+Ÿ2022-08-18 12:52:10.155  INFO 24212 --- [         task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+©2022-08-18 12:52:10.163  INFO 24212 --- [         task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+õ2022-08-18 12:52:10.589  INFO 24212 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+ü2022-08-18 12:52:10.658  INFO 24212 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7eefaca0, org.springframework.security.web.context.SecurityContextPersistenceFilter@6be8ce1b, org.springframework.security.web.header.HeaderWriterFilter@3f4964f2, org.springframework.security.web.authentication.logout.LogoutFilter@14af73e1, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@74a5bef0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@397a10df, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@19924f15, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7d5ef1c3, org.springframework.security.web.session.SessionManagementFilter@49fe0bcd, org.springframework.security.web.access.ExceptionTranslationFilter@4f7ba0af, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5178345d]
+¢2022-08-18 12:52:10.930  INFO 24212 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 28852 (http) with context path ''
+ß2022-08-18 12:52:10.931  INFO 24212 --- [    Test worker] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories‚Ä¶
+ã2022-08-18 12:52:11.278  INFO 24212 --- [    Test worker] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+∞2022-08-18 12:52:11.289  INFO 24212 --- [    Test worker] account.AccountServiceApplication        : Started AccountServiceApplication in 5.295 seconds (JVM running for 6.102)
+ü2022-08-18 12:52:11.594  INFO 24212 --- [io-28852-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+é2022-08-18 12:52:11.595  INFO 24212 --- [io-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+Ü2022-08-18 12:52:11.603  INFO 24212 --- [io-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
 
 
 REGISTRATION
@@ -143,6 +143,10 @@
 
 
 ÀHibernate: select event0_.id as id1_0_, event0_.action as action2_0_, event0_.date as date3_0_, event0_.object as object4_0_, event0_.path as path5_0_, event0_.subject as subject6_0_ from event event0_
+&1account.SecurityEvents.Event@45cd2e
+'2account.SecurityEvents.Event@4622641
+(3account.SecurityEvents.Event@16878c89
+ÀHibernate: select event0_.id as id1_0_, event0_.action as action2_0_, event0_.date as date3_0_, event0_.object as object4_0_, event0_.path as path5_0_, event0_.subject as subject6_0_ from event event0_
 [1;31m
 Start test 5[0m
 ÿHibernate: select user0_.email as email1_3_, user0_.active as active2_3_, user0_.failed_attempts as failed_a3_3_, user0_.id as id4_3_, user0_.lastname as lastname5_3_, user0_.months as months6_3_, user0_.name as name7_3_, user0_.idd as idd10_3_, user0_.password as password8_3_, user0_.roles as roles9_3_ from user user0_ where user0_.email=?
@@ -167,6 +171,10 @@
 
 
 ÀHibernate: select event0_.id as id1_0_, event0_.action as action2_0_, event0_.date as date3_0_, event0_.object as object4_0_, event0_.path as path5_0_, event0_.subject as subject6_0_ from event event0_
+(1account.SecurityEvents.Event@6ef62da2
+(2account.SecurityEvents.Event@6cffd083
+(3account.SecurityEvents.Event@41a82d2a
+ÀHibernate: select event0_.id as id1_0_, event0_.action as action2_0_, event0_.date as date3_0_, event0_.object as object4_0_, event0_.path as path5_0_, event0_.subject as subject6_0_ from event event0_
 [1;31m
 Start test 6[0m
 ÿHibernate: select user0_.email as email1_3_, user0_.active as active2_3_, user0_.failed_attempts as failed_a3_3_, user0_.id as id4_3_, user0_.lastname as lastname5_3_, user0_.months as months6_3_, user0_.name as name7_3_, user0_.idd as idd10_3_, user0_.password as password8_3_, user0_.roles as roles9_3_ from user user0_ where user0_.email=?
@@ -190,6 +198,10 @@
 ,*******Inside api/security/events**********
 
 
+ÀHibernate: select event0_.id as id1_0_, event0_.action as action2_0_, event0_.date as date3_0_, event0_.object as object4_0_, event0_.path as path5_0_, event0_.subject as subject6_0_ from event event0_
+(1account.SecurityEvents.Event@667a4431
+(2account.SecurityEvents.Event@7cc16aa4
+(3account.SecurityEvents.Event@5aaf9454
 ÀHibernate: select event0_.id as id1_0_, event0_.action as action2_0_, event0_.date as date3_0_, event0_.object as object4_0_, event0_.path as path5_0_, event0_.subject as subject6_0_ from event event0_
 [1;31m
 Start test 7[0m
@@ -237,6 +249,11 @@
 
 
 ÀHibernate: select event0_.id as id1_0_, event0_.action as action2_0_, event0_.date as date3_0_, event0_.object as object4_0_, event0_.path as path5_0_, event0_.subject as subject6_0_ from event event0_
+(1account.SecurityEvents.Event@4b5e5332
+(2account.SecurityEvents.Event@67aca7d6
+'3account.SecurityEvents.Event@7ffcfe7
+(4account.SecurityEvents.Event@5f3d8461
+ÀHibernate: select event0_.id as id1_0_, event0_.action as action2_0_, event0_.date as date3_0_, event0_.object as object4_0_, event0_.path as path5_0_, event0_.subject as subject6_0_ from event event0_
 [1;31m
 Start test 9[0m
 
@@ -282,6 +299,12 @@
 ,*******Inside api/security/events**********
 
 
+ÀHibernate: select event0_.id as id1_0_, event0_.action as action2_0_, event0_.date as date3_0_, event0_.object as object4_0_, event0_.path as path5_0_, event0_.subject as subject6_0_ from event event0_
+(1account.SecurityEvents.Event@47dc74ec
+(2account.SecurityEvents.Event@27dd70c0
+'3account.SecurityEvents.Event@3820bc3
+(4account.SecurityEvents.Event@22c2d636
+(5account.SecurityEvents.Event@69fd1aae
 ÀHibernate: select event0_.id as id1_0_, event0_.action as action2_0_, event0_.date as date3_0_, event0_.object as object4_0_, event0_.path as path5_0_, event0_.subject as subject6_0_ from event event0_
 [1;31m
 Start test 11[0m
@@ -347,6 +370,13 @@
 ÜHibernate: update user set active=?, failed_attempts=?, id=?, lastname=?, months=?, name=?, idd=?, password=?, roles=? where email=?
 3Hibernate: call next value for hibernate_sequence
 bHibernate: insert into event (action, date, object, path, subject, id) values (?, ?, ?, ?, ?, ?)
+
+
+
+***Bad credentials***
+
+
+
 [1;31m
 Start test 14[0m
 ÿHibernate: select user0_.email as email1_3_, user0_.active as active2_3_, user0_.failed_attempts as failed_a3_3_, user0_.id as id4_3_, user0_.lastname as lastname5_3_, user0_.months as months6_3_, user0_.name as name7_3_, user0_.idd as idd10_3_, user0_.password as password8_3_, user0_.roles as roles9_3_ from user user0_ where user0_.email=?
@@ -371,6 +401,13 @@
 
 
 ÀHibernate: select event0_.id as id1_0_, event0_.action as action2_0_, event0_.date as date3_0_, event0_.object as object4_0_, event0_.path as path5_0_, event0_.subject as subject6_0_ from event event0_
+(1account.SecurityEvents.Event@419fac66
+(2account.SecurityEvents.Event@606b48ac
+(3account.SecurityEvents.Event@441a1895
+(4account.SecurityEvents.Event@5b676b85
+(5account.SecurityEvents.Event@67a71013
+(6account.SecurityEvents.Event@5db30a63
+ÀHibernate: select event0_.id as id1_0_, event0_.action as action2_0_, event0_.date as date3_0_, event0_.object as object4_0_, event0_.path as path5_0_, event0_.subject as subject6_0_ from event event0_
 [1;31m
 Start test 15[0m
 ÿHibernate: select user0_.email as email1_3_, user0_.active as active2_3_, user0_.failed_attempts as failed_a3_3_, user0_.id as id4_3_, user0_.lastname as lastname5_3_, user0_.months as months6_3_, user0_.name as name7_3_, user0_.idd as idd10_3_, user0_.password as password8_3_, user0_.roles as roles9_3_ from user user0_ where user0_.email=?
@@ -382,6 +419,13 @@
 ”Hibernate: select user0_.email as email1_3_0_, user0_.active as active2_3_0_, user0_.failed_attempts as failed_a3_3_0_, user0_.id as id4_3_0_, user0_.lastname as lastname5_3_0_, user0_.months as months6_3_0_, user0_.name as name7_3_0_, user0_.idd as idd10_3_0_, user0_.password as password8_3_0_, user0_.roles as roles9_3_0_, generalseq1_.number as number1_1_1_ from user user0_ left outer join id generalseq1_ on user0_.idd=generalseq1_.number where user0_.email=?
 3Hibernate: call next value for hibernate_sequence
 bHibernate: insert into event (action, date, object, path, subject, id) values (?, ?, ?, ?, ?, ?)
+
+
+
+***Bad credentials***
+
+
+
 [1;31m
 Start test 16[0m
 ÿHibernate: select user0_.email as email1_3_, user0_.active as active2_3_, user0_.failed_attempts as failed_a3_3_, user0_.id as id4_3_, user0_.lastname as lastname5_3_, user0_.months as months6_3_, user0_.name as name7_3_, user0_.idd as idd10_3_, user0_.password as password8_3_, user0_.roles as roles9_3_ from user user0_ where user0_.email=?
@@ -406,6 +450,14 @@
 
 
 ÀHibernate: select event0_.id as id1_0_, event0_.action as action2_0_, event0_.date as date3_0_, event0_.object as object4_0_, event0_.path as path5_0_, event0_.subject as subject6_0_ from event event0_
+(1account.SecurityEvents.Event@62e97bca
+(2account.SecurityEvents.Event@3a4a3e23
+(3account.SecurityEvents.Event@4a25dd84
+&4account.SecurityEvents.Event@2996ef
+(5account.SecurityEvents.Event@29379a0b
+(6account.SecurityEvents.Event@42e71228
+(7account.SecurityEvents.Event@264a3e0d
+ÀHibernate: select event0_.id as id1_0_, event0_.action as action2_0_, event0_.date as date3_0_, event0_.object as object4_0_, event0_.path as path5_0_, event0_.subject as subject6_0_ from event event0_
 [1;31m
 Start test 17[0m
 ÿHibernate: select user0_.email as email1_3_, user0_.active as active2_3_, user0_.failed_attempts as failed_a3_3_, user0_.id as id4_3_, user0_.lastname as lastname5_3_, user0_.months as months6_3_, user0_.name as name7_3_, user0_.idd as idd10_3_, user0_.password as password8_3_, user0_.roles as roles9_3_ from user user0_ where user0_.email=?
@@ -417,8 +469,22 @@
 ”Hibernate: select user0_.email as email1_3_0_, user0_.active as active2_3_0_, user0_.failed_attempts as failed_a3_3_0_, user0_.id as id4_3_0_, user0_.lastname as lastname5_3_0_, user0_.months as months6_3_0_, user0_.name as name7_3_0_, user0_.idd as idd10_3_0_, user0_.password as password8_3_0_, user0_.roles as roles9_3_0_, generalseq1_.number as number1_1_1_ from user user0_ left outer join id generalseq1_ on user0_.idd=generalseq1_.number where user0_.email=?
 3Hibernate: call next value for hibernate_sequence
 bHibernate: insert into event (action, date, object, path, subject, id) values (?, ?, ?, ?, ?, ?)
+
+
+
+***Bad credentials***
+
+
+
 [1;31m
 Start test 18[0m
+
+
+
+>***Full authentication is required to access this resource***
+
+
+
 [1;31m
 Start test 19[0m
 ÿHibernate: select user0_.email as email1_3_, user0_.active as active2_3_, user0_.failed_attempts as failed_a3_3_, user0_.id as id4_3_, user0_.lastname as lastname5_3_, user0_.months as months6_3_, user0_.name as name7_3_, user0_.idd as idd10_3_, user0_.password as password8_3_, user0_.roles as roles9_3_ from user user0_ where user0_.email=?
@@ -443,12 +509,21 @@
 
 
 ÀHibernate: select event0_.id as id1_0_, event0_.action as action2_0_, event0_.date as date3_0_, event0_.object as object4_0_, event0_.path as path5_0_, event0_.subject as subject6_0_ from event event0_
+(1account.SecurityEvents.Event@7f7bf5d8
+(2account.SecurityEvents.Event@384f9595
+(3account.SecurityEvents.Event@4b7ca1c5
+(4account.SecurityEvents.Event@41ecc3b4
+(5account.SecurityEvents.Event@61992b64
+(6account.SecurityEvents.Event@253ee9ff
+'7account.SecurityEvents.Event@b620614
+(8account.SecurityEvents.Event@2cb485af
+ÀHibernate: select event0_.id as id1_0_, event0_.action as action2_0_, event0_.date as date3_0_, event0_.object as object4_0_, event0_.path as path5_0_, event0_.subject as subject6_0_ from event event0_
 [1;31m
 Start test 20[0m
-•2022-08-18 11:57:12.746  INFO 27708 --- [     Thread-336] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-ù2022-08-18 11:57:12.748  INFO 27708 --- [     Thread-336] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-ä2022-08-18 11:57:12.748  INFO 27708 --- [     Thread-336] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-à2022-08-18 11:57:12.759  INFO 27708 --- [     Thread-336] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+•2022-08-18 12:52:23.631  INFO 24212 --- [     Thread-336] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+ù2022-08-18 12:52:23.633  INFO 24212 --- [     Thread-336] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+ä2022-08-18 12:52:23.633  INFO 24212 --- [     Thread-336] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+à2022-08-18 12:52:23.643  INFO 24212 --- [     Thread-336] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
 
 )  .   ____          _            __ _ _
 * /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -458,38 +533,38 @@
 * =========|_|==============|___/=/_/_/_/
 , :: Spring Boot ::        (v2.3.1.RELEASE)
 
-Ç2022-08-18 11:57:12.797  INFO 27708 --- [    Test worker] account.AccountServiceApplication        : Starting AccountServiceApplication on LAPTOP-VBFHQFG2 with PID 27708 (started by Ansis in C:\Users\Ansis\Desktop\maven\Account Service\Account Service\task)
-¶2022-08-18 11:57:12.797  INFO 27708 --- [    Test worker] account.AccountServiceApplication        : No active profile set, falling back to default profiles: default
-¢2022-08-18 11:57:13.127  INFO 27708 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-∫2022-08-18 11:57:13.144  INFO 27708 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16ms. Found 4 JPA repository interfaces.
-ß2022-08-18 11:57:13.206  INFO 27708 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@75d95b67' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-∆2022-08-18 11:57:13.207  INFO 27708 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityConfig' of type [account.securityConfig.MethodSecurityConfig$$EnhancerBySpringCGLIB$$5a47c032] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-”2022-08-18 11:57:13.209  INFO 27708 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-ì2022-08-18 11:57:13.255  INFO 27708 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 28852 (http)
-2022-08-18 11:57:13.255  INFO 27708 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-ï2022-08-18 11:57:13.255  INFO 27708 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
-ò2022-08-18 11:57:13.279  INFO 27708 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-§2022-08-18 11:57:13.279  INFO 27708 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 480 ms
-Ä2022-08-18 11:57:13.330  INFO 27708 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-Ö2022-08-18 11:57:13.343  INFO 27708 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-ø2022-08-18 11:57:13.344  INFO 27708 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:../service_db'
-ú2022-08-18 11:57:13.392  INFO 27708 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-ü2022-08-18 11:57:13.400  INFO 27708 --- [         task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-ü2022-08-18 11:57:13.407  INFO 27708 --- [         task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-ù2022-08-18 11:57:13.443  WARN 27708 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-Ÿ2022-08-18 11:57:13.514  INFO 27708 --- [         task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-©2022-08-18 11:57:13.514  INFO 27708 --- [         task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-õ2022-08-18 11:57:14.513  INFO 27708 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
-ù2022-08-18 11:57:14.528  INFO 27708 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@22f7bf36, org.springframework.security.web.context.SecurityContextPersistenceFilter@73c6ae15, org.springframework.security.web.header.HeaderWriterFilter@4b37d1a4, org.springframework.security.web.authentication.logout.LogoutFilter@8113ea7, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1c879f07, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5923210, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@70dd79f7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4a3404fa, org.springframework.security.web.session.SessionManagementFilter@34114276, org.springframework.security.web.access.ExceptionTranslationFilter@50e4d8cd, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2b441609]
-¢2022-08-18 11:57:14.596  INFO 27708 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 28852 (http) with context path ''
-ß2022-08-18 11:57:14.596  INFO 27708 --- [    Test worker] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories‚Ä¶
-ã2022-08-18 11:57:14.665  INFO 27708 --- [    Test worker] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
-±2022-08-18 11:57:14.671  INFO 27708 --- [    Test worker] account.AccountServiceApplication        : Started AccountServiceApplication in 1.896 seconds (JVM running for 19.918)
+Ç2022-08-18 12:52:23.679  INFO 24212 --- [    Test worker] account.AccountServiceApplication        : Starting AccountServiceApplication on LAPTOP-VBFHQFG2 with PID 24212 (started by Ansis in C:\Users\Ansis\Desktop\maven\Account Service\Account Service\task)
+¶2022-08-18 12:52:23.679  INFO 24212 --- [    Test worker] account.AccountServiceApplication        : No active profile set, falling back to default profiles: default
+¢2022-08-18 12:52:24.046  INFO 24212 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+∫2022-08-18 12:52:24.065  INFO 24212 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19ms. Found 4 JPA repository interfaces.
+ß2022-08-18 12:52:24.134  INFO 24212 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@1f6ba47b' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+∆2022-08-18 12:52:24.137  INFO 24212 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityConfig' of type [account.securityConfig.MethodSecurityConfig$$EnhancerBySpringCGLIB$$49e26583] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+”2022-08-18 12:52:24.139  INFO 24212 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+ì2022-08-18 12:52:24.185  INFO 24212 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 28852 (http)
+2022-08-18 12:52:24.186  INFO 24212 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+ï2022-08-18 12:52:24.186  INFO 24212 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+ò2022-08-18 12:52:24.211  INFO 24212 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+§2022-08-18 12:52:24.211  INFO 24212 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 529 ms
+Ä2022-08-18 12:52:24.266  INFO 24212 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+Ö2022-08-18 12:52:24.281  INFO 24212 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+ø2022-08-18 12:52:24.281  INFO 24212 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:../service_db'
+ú2022-08-18 12:52:24.343  INFO 24212 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+ü2022-08-18 12:52:24.352  INFO 24212 --- [         task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+ü2022-08-18 12:52:24.360  INFO 24212 --- [         task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+ù2022-08-18 12:52:24.389  WARN 24212 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+Ÿ2022-08-18 12:52:24.474  INFO 24212 --- [         task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+©2022-08-18 12:52:24.475  INFO 24212 --- [         task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+õ2022-08-18 12:52:25.509  INFO 24212 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+û2022-08-18 12:52:25.525  INFO 24212 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@73c6ae15, org.springframework.security.web.context.SecurityContextPersistenceFilter@16f62062, org.springframework.security.web.header.HeaderWriterFilter@7ac47f14, org.springframework.security.web.authentication.logout.LogoutFilter@136cad3e, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@13e5b262, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@61ec2cb5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3889c343, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5923210, org.springframework.security.web.session.SessionManagementFilter@3eb641a8, org.springframework.security.web.access.ExceptionTranslationFilter@66f223fa, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@34114276]
+¢2022-08-18 12:52:25.608  INFO 24212 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 28852 (http) with context path ''
+ß2022-08-18 12:52:25.609  INFO 24212 --- [    Test worker] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories‚Ä¶
+ã2022-08-18 12:52:25.681  INFO 24212 --- [    Test worker] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+±2022-08-18 12:52:25.685  INFO 24212 --- [    Test worker] account.AccountServiceApplication        : Started AccountServiceApplication in 2.024 seconds (JVM running for 20.497)
 [1;31m
 Start test 21[0m
-ü2022-08-18 11:57:14.675  INFO 27708 --- [io-28852-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-é2022-08-18 11:57:14.675  INFO 27708 --- [io-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-Ü2022-08-18 11:57:14.678  INFO 27708 --- [io-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+ü2022-08-18 12:52:25.690  INFO 24212 --- [io-28852-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+é2022-08-18 12:52:25.690  INFO 24212 --- [io-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+Ü2022-08-18 12:52:25.695  INFO 24212 --- [io-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
 ÿHibernate: select user0_.email as email1_3_, user0_.active as active2_3_, user0_.failed_attempts as failed_a3_3_, user0_.id as id4_3_, user0_.lastname as lastname5_3_, user0_.months as months6_3_, user0_.name as name7_3_, user0_.idd as idd10_3_, user0_.password as password8_3_, user0_.roles as roles9_3_ from user user0_ where user0_.email=?
 ⁄Hibernate: select generalseq0_.number as number1_1_0_, user1_.email as email1_3_1_, user1_.active as active2_3_1_, user1_.failed_attempts as failed_a3_3_1_, user1_.id as id4_3_1_, user1_.lastname as lastname5_3_1_, user1_.months as months6_3_1_, user1_.name as name7_3_1_, user1_.idd as idd10_3_1_, user1_.password as password8_3_1_, user1_.roles as roles9_3_1_ from id generalseq0_ left outer join user user1_ on generalseq0_.number=user1_.idd where generalseq0_.number=?
 —Hibernate: select user0_.email as email1_3_1_, user0_.active as active2_3_1_, user0_.failed_attempts as failed_a3_3_1_, user0_.id as id4_3_1_, user0_.lastname as lastname5_3_1_, user0_.months as months6_3_1_, user0_.name as name7_3_1_, user0_.idd as idd10_3_1_, user0_.password as password8_3_1_, user0_.roles as roles9_3_1_, generalseq1_.number as number1_1_0_ from user user0_ left outer join id generalseq1_ on user0_.idd=generalseq1_.number where user0_.idd=?
@@ -592,6 +667,16 @@
 
 
 ÀHibernate: select event0_.id as id1_0_, event0_.action as action2_0_, event0_.date as date3_0_, event0_.object as object4_0_, event0_.path as path5_0_, event0_.subject as subject6_0_ from event event0_
+(1account.SecurityEvents.Event@1cd4f548
+(2account.SecurityEvents.Event@3ef9d97c
+(3account.SecurityEvents.Event@3f100927
+(4account.SecurityEvents.Event@31627f64
+'5account.SecurityEvents.Event@aa7b2b5
+(6account.SecurityEvents.Event@7a65a8a4
+(7account.SecurityEvents.Event@4503cffe
+(8account.SecurityEvents.Event@67b80165
+(9account.SecurityEvents.Event@503d253d
+ÀHibernate: select event0_.id as id1_0_, event0_.action as action2_0_, event0_.date as date3_0_, event0_.object as object4_0_, event0_.path as path5_0_, event0_.subject as subject6_0_ from event event0_
 [1;31m
 Start test 25[0m
 ÿHibernate: select user0_.email as email1_3_, user0_.active as active2_3_, user0_.failed_attempts as failed_a3_3_, user0_.id as id4_3_, user0_.lastname as lastname5_3_, user0_.months as months6_3_, user0_.name as name7_3_, user0_.idd as idd10_3_, user0_.password as password8_3_, user0_.roles as roles9_3_ from user user0_ where user0_.email=?
@@ -645,6 +730,17 @@
 
 
 ÀHibernate: select event0_.id as id1_0_, event0_.action as action2_0_, event0_.date as date3_0_, event0_.object as object4_0_, event0_.path as path5_0_, event0_.subject as subject6_0_ from event event0_
+(1account.SecurityEvents.Event@152dc183
+(2account.SecurityEvents.Event@1bee93ad
+(3account.SecurityEvents.Event@318aabd2
+(4account.SecurityEvents.Event@73da4e7a
+'5account.SecurityEvents.Event@880b85b
+(6account.SecurityEvents.Event@671c311d
+'7account.SecurityEvents.Event@32cc217
+(8account.SecurityEvents.Event@2224f596
+(9account.SecurityEvents.Event@2f6bc3e9
+)10account.SecurityEvents.Event@29f99bc0
+ÀHibernate: select event0_.id as id1_0_, event0_.action as action2_0_, event0_.date as date3_0_, event0_.object as object4_0_, event0_.path as path5_0_, event0_.subject as subject6_0_ from event event0_
 [1;31m
 Start test 27[0m
 ÿHibernate: select user0_.email as email1_3_, user0_.active as active2_3_, user0_.failed_attempts as failed_a3_3_, user0_.id as id4_3_, user0_.lastname as lastname5_3_, user0_.months as months6_3_, user0_.name as name7_3_, user0_.idd as idd10_3_, user0_.password as password8_3_, user0_.roles as roles9_3_ from user user0_ where user0_.email=?
@@ -697,6 +793,18 @@
 ,*******Inside api/security/events**********
 
 
+ÀHibernate: select event0_.id as id1_0_, event0_.action as action2_0_, event0_.date as date3_0_, event0_.object as object4_0_, event0_.path as path5_0_, event0_.subject as subject6_0_ from event event0_
+'1account.SecurityEvents.Event@42bb58b
+(2account.SecurityEvents.Event@1262590e
+(3account.SecurityEvents.Event@6110a370
+(4account.SecurityEvents.Event@22dd7236
+(5account.SecurityEvents.Event@7b830c0b
+(6account.SecurityEvents.Event@7ba9805c
+(7account.SecurityEvents.Event@1f46b77a
+(8account.SecurityEvents.Event@56433a66
+(9account.SecurityEvents.Event@35c387f1
+(10account.SecurityEvents.Event@2df4a75
+)11account.SecurityEvents.Event@2808c033
 ÀHibernate: select event0_.id as id1_0_, event0_.action as action2_0_, event0_.date as date3_0_, event0_.object as object4_0_, event0_.path as path5_0_, event0_.subject as subject6_0_ from event event0_
 [1;31m
 Start test 29[0m
@@ -754,6 +862,19 @@
 
 
 ÀHibernate: select event0_.id as id1_0_, event0_.action as action2_0_, event0_.date as date3_0_, event0_.object as object4_0_, event0_.path as path5_0_, event0_.subject as subject6_0_ from event event0_
+(1account.SecurityEvents.Event@1991803c
+(2account.SecurityEvents.Event@32eb1851
+(3account.SecurityEvents.Event@571e3156
+(4account.SecurityEvents.Event@1c76b935
+'5account.SecurityEvents.Event@9734ae7
+(6account.SecurityEvents.Event@6330e208
+(7account.SecurityEvents.Event@4582ebb9
+(8account.SecurityEvents.Event@6c945d2d
+(9account.SecurityEvents.Event@7fa3062a
+)10account.SecurityEvents.Event@1be78b74
+)11account.SecurityEvents.Event@49ea7492
+(12account.SecurityEvents.Event@75925b7
+ÀHibernate: select event0_.id as id1_0_, event0_.action as action2_0_, event0_.date as date3_0_, event0_.object as object4_0_, event0_.path as path5_0_, event0_.subject as subject6_0_ from event event0_
 [1;31m
 Start test 31[0m
 ÿHibernate: select user0_.email as email1_3_, user0_.active as active2_3_, user0_.failed_attempts as failed_a3_3_, user0_.id as id4_3_, user0_.lastname as lastname5_3_, user0_.months as months6_3_, user0_.name as name7_3_, user0_.idd as idd10_3_, user0_.password as password8_3_, user0_.roles as roles9_3_ from user user0_ where user0_.email=?
@@ -804,6 +925,20 @@
 ,*******Inside api/security/events**********
 
 
+ÀHibernate: select event0_.id as id1_0_, event0_.action as action2_0_, event0_.date as date3_0_, event0_.object as object4_0_, event0_.path as path5_0_, event0_.subject as subject6_0_ from event event0_
+(1account.SecurityEvents.Event@3359e8ff
+'2account.SecurityEvents.Event@db41138
+(3account.SecurityEvents.Event@33e50dad
+(4account.SecurityEvents.Event@6f5830f3
+(5account.SecurityEvents.Event@13ba23f7
+(6account.SecurityEvents.Event@3eaacd69
+(7account.SecurityEvents.Event@25b92774
+'8account.SecurityEvents.Event@b484498
+(9account.SecurityEvents.Event@492f6b9d
+)10account.SecurityEvents.Event@21862654
+)11account.SecurityEvents.Event@4d682797
+(12account.SecurityEvents.Event@4cdc626
+)13account.SecurityEvents.Event@368c26a1
 ÀHibernate: select event0_.id as id1_0_, event0_.action as action2_0_, event0_.date as date3_0_, event0_.object as object4_0_, event0_.path as path5_0_, event0_.subject as subject6_0_ from event event0_
 [1;31m
 Start test 33[0m
@@ -856,6 +991,21 @@
 
 
 ÀHibernate: select event0_.id as id1_0_, event0_.action as action2_0_, event0_.date as date3_0_, event0_.object as object4_0_, event0_.path as path5_0_, event0_.subject as subject6_0_ from event event0_
+(1account.SecurityEvents.Event@68d0af64
+(2account.SecurityEvents.Event@30ccb2f3
+(3account.SecurityEvents.Event@768b5861
+(4account.SecurityEvents.Event@1eb70698
+(5account.SecurityEvents.Event@73f121a5
+(6account.SecurityEvents.Event@26ff4e02
+'7account.SecurityEvents.Event@a1b42ec
+(8account.SecurityEvents.Event@2c3e06f1
+(9account.SecurityEvents.Event@56b8e6da
+(10account.SecurityEvents.Event@a6b2d51
+)11account.SecurityEvents.Event@5ab712d2
+(12account.SecurityEvents.Event@6e29efb
+)13account.SecurityEvents.Event@177d26cb
+)14account.SecurityEvents.Event@44af80d0
+ÀHibernate: select event0_.id as id1_0_, event0_.action as action2_0_, event0_.date as date3_0_, event0_.object as object4_0_, event0_.path as path5_0_, event0_.subject as subject6_0_ from event event0_
 [1;31m
 Start test 35[0m
 ÿHibernate: select user0_.email as email1_3_, user0_.active as active2_3_, user0_.failed_attempts as failed_a3_3_, user0_.id as id4_3_, user0_.lastname as lastname5_3_, user0_.months as months6_3_, user0_.name as name7_3_, user0_.idd as idd10_3_, user0_.password as password8_3_, user0_.roles as roles9_3_ from user user0_ where user0_.email=?
@@ -906,6 +1056,22 @@
 ,*******Inside api/security/events**********
 
 
+ÀHibernate: select event0_.id as id1_0_, event0_.action as action2_0_, event0_.date as date3_0_, event0_.object as object4_0_, event0_.path as path5_0_, event0_.subject as subject6_0_ from event event0_
+(1account.SecurityEvents.Event@6cfa1fd3
+(2account.SecurityEvents.Event@77b87ad2
+(3account.SecurityEvents.Event@15236d42
+(4account.SecurityEvents.Event@78e9a383
+(5account.SecurityEvents.Event@44d13fca
+(6account.SecurityEvents.Event@700ba368
+(7account.SecurityEvents.Event@7ecc9956
+(8account.SecurityEvents.Event@4b8cc8b7
+'9account.SecurityEvents.Event@6ee8163
+)10account.SecurityEvents.Event@2bd37235
+)11account.SecurityEvents.Event@314f5830
+)12account.SecurityEvents.Event@1cabf7de
+)13account.SecurityEvents.Event@6e3c98b1
+)14account.SecurityEvents.Event@5ece1d99
+)15account.SecurityEvents.Event@158b40a8
 ÀHibernate: select event0_.id as id1_0_, event0_.action as action2_0_, event0_.date as date3_0_, event0_.object as object4_0_, event0_.path as path5_0_, event0_.subject as subject6_0_ from event event0_
 [1;31m
 Start test 37[0m
@@ -958,6 +1124,23 @@
 
 
 ÀHibernate: select event0_.id as id1_0_, event0_.action as action2_0_, event0_.date as date3_0_, event0_.object as object4_0_, event0_.path as path5_0_, event0_.subject as subject6_0_ from event event0_
+(1account.SecurityEvents.Event@1dd1a443
+(2account.SecurityEvents.Event@11e0198a
+(3account.SecurityEvents.Event@199297d5
+(4account.SecurityEvents.Event@33dfd2d8
+(5account.SecurityEvents.Event@23bc8b5c
+(6account.SecurityEvents.Event@3281eae8
+(7account.SecurityEvents.Event@3fa0ff52
+(8account.SecurityEvents.Event@72a4a36c
+(9account.SecurityEvents.Event@3585200f
+(10account.SecurityEvents.Event@86e4afd
+)11account.SecurityEvents.Event@300c6ecd
+)12account.SecurityEvents.Event@67e40463
+)13account.SecurityEvents.Event@7bfdc5c8
+(14account.SecurityEvents.Event@13e51e8
+)15account.SecurityEvents.Event@52973d04
+)16account.SecurityEvents.Event@1597ec29
+ÀHibernate: select event0_.id as id1_0_, event0_.action as action2_0_, event0_.date as date3_0_, event0_.object as object4_0_, event0_.path as path5_0_, event0_.subject as subject6_0_ from event event0_
 [1;31m
 Start test 39[0m
 ÿHibernate: select user0_.email as email1_3_, user0_.active as active2_3_, user0_.failed_attempts as failed_a3_3_, user0_.id as id4_3_, user0_.lastname as lastname5_3_, user0_.months as months6_3_, user0_.name as name7_3_, user0_.idd as idd10_3_, user0_.password as password8_3_, user0_.roles as roles9_3_ from user user0_ where user0_.email=?
@@ -1008,6 +1191,24 @@
 ,*******Inside api/security/events**********
 
 
+ÀHibernate: select event0_.id as id1_0_, event0_.action as action2_0_, event0_.date as date3_0_, event0_.object as object4_0_, event0_.path as path5_0_, event0_.subject as subject6_0_ from event event0_
+(1account.SecurityEvents.Event@19546a7e
+(2account.SecurityEvents.Event@1c4f49e0
+(3account.SecurityEvents.Event@60fea291
+(4account.SecurityEvents.Event@3131f35e
+'5account.SecurityEvents.Event@b0c689c
+(6account.SecurityEvents.Event@6d6a2054
+(7account.SecurityEvents.Event@7815ed42
+(8account.SecurityEvents.Event@46005a1d
+(9account.SecurityEvents.Event@2e2092c9
+)10account.SecurityEvents.Event@12747fd9
+)11account.SecurityEvents.Event@455cff28
+(12account.SecurityEvents.Event@1c8952c
+)13account.SecurityEvents.Event@2b54f906
+)14account.SecurityEvents.Event@1a6fc102
+)15account.SecurityEvents.Event@3868c8d8
+)16account.SecurityEvents.Event@7d4c5b0c
+)17account.SecurityEvents.Event@715c016a
 ÀHibernate: select event0_.id as id1_0_, event0_.action as action2_0_, event0_.date as date3_0_, event0_.object as object4_0_, event0_.path as path5_0_, event0_.subject as subject6_0_ from event event0_
 [1;31m
 Start test 41[0m
@@ -1060,6 +1261,25 @@
 
 
 ÀHibernate: select event0_.id as id1_0_, event0_.action as action2_0_, event0_.date as date3_0_, event0_.object as object4_0_, event0_.path as path5_0_, event0_.subject as subject6_0_ from event event0_
+(1account.SecurityEvents.Event@51b10900
+(2account.SecurityEvents.Event@35f489a8
+(3account.SecurityEvents.Event@770f90b5
+(4account.SecurityEvents.Event@48b8d43d
+(5account.SecurityEvents.Event@11983d23
+&6account.SecurityEvents.Event@304f71
+'7account.SecurityEvents.Event@bb1fdfa
+'8account.SecurityEvents.Event@5a6d98d
+(9account.SecurityEvents.Event@55078d3f
+)10account.SecurityEvents.Event@57ce1b29
+)11account.SecurityEvents.Event@53146207
+)12account.SecurityEvents.Event@604da359
+(13account.SecurityEvents.Event@9caa41a
+)14account.SecurityEvents.Event@2efae159
+)15account.SecurityEvents.Event@5e8ebadb
+)16account.SecurityEvents.Event@53548d38
+(17account.SecurityEvents.Event@fe2093c
+)18account.SecurityEvents.Event@76ebc1b0
+ÀHibernate: select event0_.id as id1_0_, event0_.action as action2_0_, event0_.date as date3_0_, event0_.object as object4_0_, event0_.path as path5_0_, event0_.subject as subject6_0_ from event event0_
 [1;31m
 Start test 43[0m
 ÿHibernate: select user0_.email as email1_3_, user0_.active as active2_3_, user0_.failed_attempts as failed_a3_3_, user0_.id as id4_3_, user0_.lastname as lastname5_3_, user0_.months as months6_3_, user0_.name as name7_3_, user0_.idd as idd10_3_, user0_.password as password8_3_, user0_.roles as roles9_3_ from user user0_ where user0_.email=?
@@ -1111,6 +1331,26 @@
 
 
 ÀHibernate: select event0_.id as id1_0_, event0_.action as action2_0_, event0_.date as date3_0_, event0_.object as object4_0_, event0_.path as path5_0_, event0_.subject as subject6_0_ from event event0_
+(1account.SecurityEvents.Event@6fd45a91
+'2account.SecurityEvents.Event@838a730
+(3account.SecurityEvents.Event@12665aae
+&4account.SecurityEvents.Event@372b38
+(5account.SecurityEvents.Event@4dfaf97d
+&6account.SecurityEvents.Event@b6c6d5
+(7account.SecurityEvents.Event@20254f47
+(8account.SecurityEvents.Event@19f2de90
+'9account.SecurityEvents.Event@3d9fdc2
+)10account.SecurityEvents.Event@356f1302
+)11account.SecurityEvents.Event@3fba3d9f
+)12account.SecurityEvents.Event@303372a6
+)13account.SecurityEvents.Event@7cc8ae8f
+)14account.SecurityEvents.Event@31724517
+)15account.SecurityEvents.Event@5f4ac063
+)16account.SecurityEvents.Event@74473f6e
+)17account.SecurityEvents.Event@4d425bbf
+)18account.SecurityEvents.Event@6e3be5fd
+)19account.SecurityEvents.Event@67fb6981
+ÀHibernate: select event0_.id as id1_0_, event0_.action as action2_0_, event0_.date as date3_0_, event0_.object as object4_0_, event0_.path as path5_0_, event0_.subject as subject6_0_ from event event0_
 [1;31m
 Start test 45[0m
 ÿHibernate: select user0_.email as email1_3_, user0_.active as active2_3_, user0_.failed_attempts as failed_a3_3_, user0_.id as id4_3_, user0_.lastname as lastname5_3_, user0_.months as months6_3_, user0_.name as name7_3_, user0_.idd as idd10_3_, user0_.password as password8_3_, user0_.roles as roles9_3_ from user user0_ where user0_.email=?
@@ -1127,6 +1367,13 @@
 ÜHibernate: update user set active=?, failed_attempts=?, id=?, lastname=?, months=?, name=?, idd=?, password=?, roles=? where email=?
 3Hibernate: call next value for hibernate_sequence
 bHibernate: insert into event (action, date, object, path, subject, id) values (?, ?, ?, ?, ?, ?)
+
+
+
+***Bad credentials***
+
+
+
 [1;31m
 Start test 46[0m
 ÿHibernate: select user0_.email as email1_3_, user0_.active as active2_3_, user0_.failed_attempts as failed_a3_3_, user0_.id as id4_3_, user0_.lastname as lastname5_3_, user0_.months as months6_3_, user0_.name as name7_3_, user0_.idd as idd10_3_, user0_.password as password8_3_, user0_.roles as roles9_3_ from user user0_ where user0_.email=?
@@ -1151,6 +1398,27 @@
 
 
 ÀHibernate: select event0_.id as id1_0_, event0_.action as action2_0_, event0_.date as date3_0_, event0_.object as object4_0_, event0_.path as path5_0_, event0_.subject as subject6_0_ from event event0_
+(1account.SecurityEvents.Event@3ecd7a5c
+(2account.SecurityEvents.Event@5ffb36b4
+'3account.SecurityEvents.Event@25a375c
+(4account.SecurityEvents.Event@724f2fd2
+(5account.SecurityEvents.Event@2705b45d
+(6account.SecurityEvents.Event@214d789f
+(7account.SecurityEvents.Event@727e5b3d
+(8account.SecurityEvents.Event@79c4db1f
+(9account.SecurityEvents.Event@73e93f26
+)10account.SecurityEvents.Event@39aa3844
+)11account.SecurityEvents.Event@398d3bff
+)12account.SecurityEvents.Event@664e03f2
+)13account.SecurityEvents.Event@5c640012
+)14account.SecurityEvents.Event@34e46bc2
+)15account.SecurityEvents.Event@64e6fc62
+)16account.SecurityEvents.Event@7221329f
+(17account.SecurityEvents.Event@eb9d859
+)18account.SecurityEvents.Event@19141837
+)19account.SecurityEvents.Event@4a42f29b
+)20account.SecurityEvents.Event@310c8486
+ÀHibernate: select event0_.id as id1_0_, event0_.action as action2_0_, event0_.date as date3_0_, event0_.object as object4_0_, event0_.path as path5_0_, event0_.subject as subject6_0_ from event event0_
 [1;31m
 Start test 47[0m
 ÿHibernate: select user0_.email as email1_3_, user0_.active as active2_3_, user0_.failed_attempts as failed_a3_3_, user0_.id as id4_3_, user0_.lastname as lastname5_3_, user0_.months as months6_3_, user0_.name as name7_3_, user0_.idd as idd10_3_, user0_.password as password8_3_, user0_.roles as roles9_3_ from user user0_ where user0_.email=?
@@ -1167,6 +1435,13 @@
 ÜHibernate: update user set active=?, failed_attempts=?, id=?, lastname=?, months=?, name=?, idd=?, password=?, roles=? where email=?
 3Hibernate: call next value for hibernate_sequence
 bHibernate: insert into event (action, date, object, path, subject, id) values (?, ?, ?, ?, ?, ?)
+
+
+
+***Bad credentials***
+
+
+
 [1;31m
 Start test 48[0m
 ÿHibernate: select user0_.email as email1_3_, user0_.active as active2_3_, user0_.failed_attempts as failed_a3_3_, user0_.id as id4_3_, user0_.lastname as lastname5_3_, user0_.months as months6_3_, user0_.name as name7_3_, user0_.idd as idd10_3_, user0_.password as password8_3_, user0_.roles as roles9_3_ from user user0_ where user0_.email=?
@@ -1191,6 +1466,28 @@
 
 
 ÀHibernate: select event0_.id as id1_0_, event0_.action as action2_0_, event0_.date as date3_0_, event0_.object as object4_0_, event0_.path as path5_0_, event0_.subject as subject6_0_ from event event0_
+(1account.SecurityEvents.Event@386fa36e
+(2account.SecurityEvents.Event@6539f5cd
+(3account.SecurityEvents.Event@67542de1
+(4account.SecurityEvents.Event@24fe858c
+(5account.SecurityEvents.Event@614f36ae
+(6account.SecurityEvents.Event@4b7230d7
+'7account.SecurityEvents.Event@d8f377d
+(8account.SecurityEvents.Event@5d0d01a5
+(9account.SecurityEvents.Event@45efb6ec
+)10account.SecurityEvents.Event@1f41c20e
+)11account.SecurityEvents.Event@6b012a44
+)12account.SecurityEvents.Event@5e340ea8
+)13account.SecurityEvents.Event@66548b54
+)14account.SecurityEvents.Event@77146422
+)15account.SecurityEvents.Event@1525338e
+)16account.SecurityEvents.Event@6b9a3ecc
+)17account.SecurityEvents.Event@295606c0
+)18account.SecurityEvents.Event@7db742bc
+)19account.SecurityEvents.Event@4132a7c7
+)20account.SecurityEvents.Event@7b648d73
+)21account.SecurityEvents.Event@629df4d9
+ÀHibernate: select event0_.id as id1_0_, event0_.action as action2_0_, event0_.date as date3_0_, event0_.object as object4_0_, event0_.path as path5_0_, event0_.subject as subject6_0_ from event event0_
 [1;31m
 Start test 49[0m
 ÿHibernate: select user0_.email as email1_3_, user0_.active as active2_3_, user0_.failed_attempts as failed_a3_3_, user0_.id as id4_3_, user0_.lastname as lastname5_3_, user0_.months as months6_3_, user0_.name as name7_3_, user0_.idd as idd10_3_, user0_.password as password8_3_, user0_.roles as roles9_3_ from user user0_ where user0_.email=?
@@ -1207,6 +1504,13 @@
 ÜHibernate: update user set active=?, failed_attempts=?, id=?, lastname=?, months=?, name=?, idd=?, password=?, roles=? where email=?
 3Hibernate: call next value for hibernate_sequence
 bHibernate: insert into event (action, date, object, path, subject, id) values (?, ?, ?, ?, ?, ?)
+
+
+
+***Bad credentials***
+
+
+
 [1;31m
 Start test 50[0m
 ÿHibernate: select user0_.email as email1_3_, user0_.active as active2_3_, user0_.failed_attempts as failed_a3_3_, user0_.id as id4_3_, user0_.lastname as lastname5_3_, user0_.months as months6_3_, user0_.name as name7_3_, user0_.idd as idd10_3_, user0_.password as password8_3_, user0_.roles as roles9_3_ from user user0_ where user0_.email=?
@@ -1231,6 +1535,29 @@
 
 
 ÀHibernate: select event0_.id as id1_0_, event0_.action as action2_0_, event0_.date as date3_0_, event0_.object as object4_0_, event0_.path as path5_0_, event0_.subject as subject6_0_ from event event0_
+'1account.SecurityEvents.Event@e7b6800
+(2account.SecurityEvents.Event@5ec25672
+(3account.SecurityEvents.Event@6a4c847c
+(4account.SecurityEvents.Event@6978e309
+(5account.SecurityEvents.Event@3c96bd4e
+(6account.SecurityEvents.Event@702b1d68
+(7account.SecurityEvents.Event@7e4a1875
+(8account.SecurityEvents.Event@5084dc1e
+(9account.SecurityEvents.Event@59f1778d
+)10account.SecurityEvents.Event@7119f186
+)11account.SecurityEvents.Event@5fbed660
+)12account.SecurityEvents.Event@292c85a5
+)13account.SecurityEvents.Event@7b33d212
+)14account.SecurityEvents.Event@45988933
+)15account.SecurityEvents.Event@6cbc5a36
+)16account.SecurityEvents.Event@21f0fba9
+)17account.SecurityEvents.Event@44b61ec7
+)18account.SecurityEvents.Event@45e6c673
+)19account.SecurityEvents.Event@4b054913
+)20account.SecurityEvents.Event@6d8ece69
+)21account.SecurityEvents.Event@19baa539
+)22account.SecurityEvents.Event@6a1c2d23
+ÀHibernate: select event0_.id as id1_0_, event0_.action as action2_0_, event0_.date as date3_0_, event0_.object as object4_0_, event0_.path as path5_0_, event0_.subject as subject6_0_ from event event0_
 [1;31m
 Start test 51[0m
 ÿHibernate: select user0_.email as email1_3_, user0_.active as active2_3_, user0_.failed_attempts as failed_a3_3_, user0_.id as id4_3_, user0_.lastname as lastname5_3_, user0_.months as months6_3_, user0_.name as name7_3_, user0_.idd as idd10_3_, user0_.password as password8_3_, user0_.roles as roles9_3_ from user user0_ where user0_.email=?
@@ -1247,6 +1574,13 @@
 ÜHibernate: update user set active=?, failed_attempts=?, id=?, lastname=?, months=?, name=?, idd=?, password=?, roles=? where email=?
 3Hibernate: call next value for hibernate_sequence
 bHibernate: insert into event (action, date, object, path, subject, id) values (?, ?, ?, ?, ?, ?)
+
+
+
+***Bad credentials***
+
+
+
 [1;31m
 Start test 52[0m
 ÿHibernate: select user0_.email as email1_3_, user0_.active as active2_3_, user0_.failed_attempts as failed_a3_3_, user0_.id as id4_3_, user0_.lastname as lastname5_3_, user0_.months as months6_3_, user0_.name as name7_3_, user0_.idd as idd10_3_, user0_.password as password8_3_, user0_.roles as roles9_3_ from user user0_ where user0_.email=?
@@ -1271,6 +1605,30 @@
 
 
 ÀHibernate: select event0_.id as id1_0_, event0_.action as action2_0_, event0_.date as date3_0_, event0_.object as object4_0_, event0_.path as path5_0_, event0_.subject as subject6_0_ from event event0_
+(1account.SecurityEvents.Event@3553f2d8
+(2account.SecurityEvents.Event@609d0ae4
+(3account.SecurityEvents.Event@1a679298
+(4account.SecurityEvents.Event@13f9acd3
+(5account.SecurityEvents.Event@39964946
+(6account.SecurityEvents.Event@3154aeba
+(7account.SecurityEvents.Event@1701095a
+(8account.SecurityEvents.Event@49c0b05d
+(9account.SecurityEvents.Event@42970c5a
+)10account.SecurityEvents.Event@56225bcc
+)11account.SecurityEvents.Event@49f6d38b
+(12account.SecurityEvents.Event@578c0b0
+)13account.SecurityEvents.Event@7f77f999
+)14account.SecurityEvents.Event@3b4f3180
+)15account.SecurityEvents.Event@44dac7e9
+(16account.SecurityEvents.Event@7e4f282
+)17account.SecurityEvents.Event@479f78d6
+(18account.SecurityEvents.Event@59e9294
+)19account.SecurityEvents.Event@17e9f841
+)20account.SecurityEvents.Event@37b978dc
+(21account.SecurityEvents.Event@bdcff35
+)22account.SecurityEvents.Event@7a27d6e8
+)23account.SecurityEvents.Event@22d4021d
+ÀHibernate: select event0_.id as id1_0_, event0_.action as action2_0_, event0_.date as date3_0_, event0_.object as object4_0_, event0_.path as path5_0_, event0_.subject as subject6_0_ from event event0_
 [1;31m
 Start test 53[0m
 ÿHibernate: select user0_.email as email1_3_, user0_.active as active2_3_, user0_.failed_attempts as failed_a3_3_, user0_.id as id4_3_, user0_.lastname as lastname5_3_, user0_.months as months6_3_, user0_.name as name7_3_, user0_.idd as idd10_3_, user0_.password as password8_3_, user0_.roles as roles9_3_ from user user0_ where user0_.email=?
@@ -1294,6 +1652,13 @@
 bHibernate: insert into event (action, date, object, path, subject, id) values (?, ?, ?, ?, ?, ?)
 3Hibernate: call next value for hibernate_sequence
 bHibernate: insert into event (action, date, object, path, subject, id) values (?, ?, ?, ?, ?, ?)
+
+
+
+***Bad credentials***
+
+
+
 [1;31m
 Start test 54[0m
 ÿHibernate: select user0_.email as email1_3_, user0_.active as active2_3_, user0_.failed_attempts as failed_a3_3_, user0_.id as id4_3_, user0_.lastname as lastname5_3_, user0_.months as months6_3_, user0_.name as name7_3_, user0_.idd as idd10_3_, user0_.password as password8_3_, user0_.roles as roles9_3_ from user user0_ where user0_.email=?
@@ -1318,8 +1683,119 @@
 
 
 ÀHibernate: select event0_.id as id1_0_, event0_.action as action2_0_, event0_.date as date3_0_, event0_.object as object4_0_, event0_.path as path5_0_, event0_.subject as subject6_0_ from event event0_
+(1account.SecurityEvents.Event@36863fc1
+(2account.SecurityEvents.Event@2f8d603c
+(3account.SecurityEvents.Event@7a9b000c
+(4account.SecurityEvents.Event@30fd44c7
+(5account.SecurityEvents.Event@37021d2e
+(6account.SecurityEvents.Event@73ca1772
+(7account.SecurityEvents.Event@5173e267
+'8account.SecurityEvents.Event@bf24ff2
+(9account.SecurityEvents.Event@2c3ec8cf
+(10account.SecurityEvents.Event@f6c3bbd
+)11account.SecurityEvents.Event@41c280ed
+)12account.SecurityEvents.Event@58d6caf8
+(13account.SecurityEvents.Event@274099d
+)14account.SecurityEvents.Event@6cab7bbd
+)15account.SecurityEvents.Event@39bb4b2d
+)16account.SecurityEvents.Event@57d4c7e8
+)17account.SecurityEvents.Event@75ce046e
+)18account.SecurityEvents.Event@420ffff9
+)19account.SecurityEvents.Event@210e36b6
+)20account.SecurityEvents.Event@50944ef8
+)21account.SecurityEvents.Event@55fccdf0
+)22account.SecurityEvents.Event@68310081
+)23account.SecurityEvents.Event@385a30b7
+)24account.SecurityEvents.Event@4acb4aca
+)25account.SecurityEvents.Event@79eb8d2e
+)26account.SecurityEvents.Event@193ebf9a
+ÀHibernate: select event0_.id as id1_0_, event0_.action as action2_0_, event0_.date as date3_0_, event0_.object as object4_0_, event0_.path as path5_0_, event0_.subject as subject6_0_ from event event0_
 [1;31m
 Start test 55[0m
 ÿHibernate: select user0_.email as email1_3_, user0_.active as active2_3_, user0_.failed_attempts as failed_a3_3_, user0_.id as id4_3_, user0_.lastname as lastname5_3_, user0_.months as months6_3_, user0_.name as name7_3_, user0_.idd as idd10_3_, user0_.password as password8_3_, user0_.roles as roles9_3_ from user user0_ where user0_.email=?
 ⁄Hibernate: select generalseq0_.number as number1_1_0_, user1_.email as email1_3_1_, user1_.active as active2_3_1_, user1_.failed_attempts as failed_a3_3_1_, user1_.id as id4_3_1_, user1_.lastname as lastname5_3_1_, user1_.months as months6_3_1_, user1_.name as name7_3_1_, user1_.idd as idd10_3_1_, user1_.password as password8_3_1_, user1_.roles as roles9_3_1_ from id generalseq0_ left outer join user user1_ on generalseq0_.number=user1_.idd where generalseq0_.number=?
 —Hibernate: select user0_.email as email1_3_1_, user0_.active as active2_3_1_, user0_.failed_attempts as failed_a3_3_1_, user0_.id as id4_3_1_, user0_.lastname as lastname5_3_1_, user0_.months as months6_3_1_, user0_.name as name7_3_1_, user0_.idd as idd10_3_1_, user0_.password as password8_3_1_, user0_.roles as roles9_3_1_, generalseq1_.number as number1_1_0_ from user user0_ left outer join id generalseq1_ on user0_.idd=generalseq1_.number where user0_.idd=?
+
+
+
+***User account is locked***
+
+
+
+[1;31m
+Start test 56[0m
+ÿHibernate: select user0_.email as email1_3_, user0_.active as active2_3_, user0_.failed_attempts as failed_a3_3_, user0_.id as id4_3_, user0_.lastname as lastname5_3_, user0_.months as months6_3_, user0_.name as name7_3_, user0_.idd as idd10_3_, user0_.password as password8_3_, user0_.roles as roles9_3_ from user user0_ where user0_.email=?
+⁄Hibernate: select generalseq0_.number as number1_1_0_, user1_.email as email1_3_1_, user1_.active as active2_3_1_, user1_.failed_attempts as failed_a3_3_1_, user1_.id as id4_3_1_, user1_.lastname as lastname5_3_1_, user1_.months as months6_3_1_, user1_.name as name7_3_1_, user1_.idd as idd10_3_1_, user1_.password as password8_3_1_, user1_.roles as roles9_3_1_ from id generalseq0_ left outer join user user1_ on generalseq0_.number=user1_.idd where generalseq0_.number=?
+—Hibernate: select user0_.email as email1_3_1_, user0_.active as active2_3_1_, user0_.failed_attempts as failed_a3_3_1_, user0_.id as id4_3_1_, user0_.lastname as lastname5_3_1_, user0_.months as months6_3_1_, user0_.name as name7_3_1_, user0_.idd as idd10_3_1_, user0_.password as password8_3_1_, user0_.roles as roles9_3_1_, generalseq1_.number as number1_1_0_ from user user0_ left outer join id generalseq1_ on user0_.idd=generalseq1_.number where user0_.idd=?
+”Hibernate: select user0_.email as email1_3_0_, user0_.active as active2_3_0_, user0_.failed_attempts as failed_a3_3_0_, user0_.id as id4_3_0_, user0_.lastname as lastname5_3_0_, user0_.months as months6_3_0_, user0_.name as name7_3_0_, user0_.idd as idd10_3_0_, user0_.password as password8_3_0_, user0_.roles as roles9_3_0_, generalseq1_.number as number1_1_1_ from user user0_ left outer join id generalseq1_ on user0_.idd=generalseq1_.number where user0_.email=?
+”Hibernate: select user0_.email as email1_3_1_, user0_.active as active2_3_1_, user0_.failed_attempts as failed_a3_3_1_, user0_.id as id4_3_1_, user0_.lastname as lastname5_3_1_, user0_.months as months6_3_1_, user0_.name as name7_3_1_, user0_.idd as idd10_3_1_, user0_.password as password8_3_1_, user0_.roles as roles9_3_1_, generalseq1_.number as number1_1_0_ from user user0_ left outer join id generalseq1_ on user0_.idd=generalseq1_.number where user0_.email=?
+—Hibernate: select user0_.email as email1_3_1_, user0_.active as active2_3_1_, user0_.failed_attempts as failed_a3_3_1_, user0_.id as id4_3_1_, user0_.lastname as lastname5_3_1_, user0_.months as months6_3_1_, user0_.name as name7_3_1_, user0_.idd as idd10_3_1_, user0_.password as password8_3_1_, user0_.roles as roles9_3_1_, generalseq1_.number as number1_1_0_ from user user0_ left outer join id generalseq1_ on user0_.idd=generalseq1_.number where user0_.idd=?
+
+
+***RESET SUCCESSFULL!!!***
+
+
+
+
+,***Sucsessfull event catched at listener***
+
+
+
+
+,*******Inside api/security/events**********
+
+
+ÀHibernate: select event0_.id as id1_0_, event0_.action as action2_0_, event0_.date as date3_0_, event0_.object as object4_0_, event0_.path as path5_0_, event0_.subject as subject6_0_ from event event0_
+(1account.SecurityEvents.Event@11c73d12
+(2account.SecurityEvents.Event@375a418f
+(3account.SecurityEvents.Event@6cd59e6c
+(4account.SecurityEvents.Event@1c87951b
+(5account.SecurityEvents.Event@34001434
+(6account.SecurityEvents.Event@51336d02
+(7account.SecurityEvents.Event@11d5afb6
+(8account.SecurityEvents.Event@31dacfda
+'9account.SecurityEvents.Event@5cfdc61
+)10account.SecurityEvents.Event@4fdeeaa7
+)11account.SecurityEvents.Event@73ca44f5
+)12account.SecurityEvents.Event@1489f149
+)13account.SecurityEvents.Event@6f5e1b6d
+)14account.SecurityEvents.Event@57ed4ff3
+)15account.SecurityEvents.Event@76214417
+)16account.SecurityEvents.Event@2df9f023
+)17account.SecurityEvents.Event@32e31382
+(18account.SecurityEvents.Event@f4c50fa
+)19account.SecurityEvents.Event@7331acf8
+)20account.SecurityEvents.Event@112b3255
+)21account.SecurityEvents.Event@3b7e4cf1
+)22account.SecurityEvents.Event@56d800e4
+)23account.SecurityEvents.Event@287030ab
+)24account.SecurityEvents.Event@6081066a
+)25account.SecurityEvents.Event@2951c74f
+)26account.SecurityEvents.Event@3f183da1
+ÀHibernate: select event0_.id as id1_0_, event0_.action as action2_0_, event0_.date as date3_0_, event0_.object as object4_0_, event0_.path as path5_0_, event0_.subject as subject6_0_ from event event0_
+[1;31m
+Start test 57[0m
+ÿHibernate: select user0_.email as email1_3_, user0_.active as active2_3_, user0_.failed_attempts as failed_a3_3_, user0_.id as id4_3_, user0_.lastname as lastname5_3_, user0_.months as months6_3_, user0_.name as name7_3_, user0_.idd as idd10_3_, user0_.password as password8_3_, user0_.roles as roles9_3_ from user user0_ where user0_.email=?
+⁄Hibernate: select generalseq0_.number as number1_1_0_, user1_.email as email1_3_1_, user1_.active as active2_3_1_, user1_.failed_attempts as failed_a3_3_1_, user1_.id as id4_3_1_, user1_.lastname as lastname5_3_1_, user1_.months as months6_3_1_, user1_.name as name7_3_1_, user1_.idd as idd10_3_1_, user1_.password as password8_3_1_, user1_.roles as roles9_3_1_ from id generalseq0_ left outer join user user1_ on generalseq0_.number=user1_.idd where generalseq0_.number=?
+—Hibernate: select user0_.email as email1_3_1_, user0_.active as active2_3_1_, user0_.failed_attempts as failed_a3_3_1_, user0_.id as id4_3_1_, user0_.lastname as lastname5_3_1_, user0_.months as months6_3_1_, user0_.name as name7_3_1_, user0_.idd as idd10_3_1_, user0_.password as password8_3_1_, user0_.roles as roles9_3_1_, generalseq1_.number as number1_1_0_ from user user0_ left outer join id generalseq1_ on user0_.idd=generalseq1_.number where user0_.idd=?
+”Hibernate: select user0_.email as email1_3_0_, user0_.active as active2_3_0_, user0_.failed_attempts as failed_a3_3_0_, user0_.id as id4_3_0_, user0_.lastname as lastname5_3_0_, user0_.months as months6_3_0_, user0_.name as name7_3_0_, user0_.idd as idd10_3_0_, user0_.password as password8_3_0_, user0_.roles as roles9_3_0_, generalseq1_.number as number1_1_1_ from user user0_ left outer join id generalseq1_ on user0_.idd=generalseq1_.number where user0_.email=?
+”Hibernate: select user0_.email as email1_3_1_, user0_.active as active2_3_1_, user0_.failed_attempts as failed_a3_3_1_, user0_.id as id4_3_1_, user0_.lastname as lastname5_3_1_, user0_.months as months6_3_1_, user0_.name as name7_3_1_, user0_.idd as idd10_3_1_, user0_.password as password8_3_1_, user0_.roles as roles9_3_1_, generalseq1_.number as number1_1_0_ from user user0_ left outer join id generalseq1_ on user0_.idd=generalseq1_.number where user0_.email=?
+—Hibernate: select user0_.email as email1_3_1_, user0_.active as active2_3_1_, user0_.failed_attempts as failed_a3_3_1_, user0_.id as id4_3_1_, user0_.lastname as lastname5_3_1_, user0_.months as months6_3_1_, user0_.name as name7_3_1_, user0_.idd as idd10_3_1_, user0_.password as password8_3_1_, user0_.roles as roles9_3_1_, generalseq1_.number as number1_1_0_ from user user0_ left outer join id generalseq1_ on user0_.idd=generalseq1_.number where user0_.idd=?
+
+
+***RESET SUCCESSFULL!!!***
+
+
+
+
+,***Sucsessfull event catched at listener***
+
+
+
+
+********Inside api/admin/user/access******
+
+user:  MaxMustermann@acme.com
+operation: UNLOCK
+*********************
+”Hibernate: select user0_.email as email1_3_0_, user0_.active as active2_3_0_, user0_.failed_attempts as failed_a3_3_0_, user0_.id as id4_3_0_, user0_.lastname as lastname5_3_0_, user0_.months as months6_3_0_, user0_.name as name7_3_0_, user0_.idd as idd10_3_0_, user0_.password as password8_3_0_, user0_.roles as roles9_3_0_, generalseq1_.number as number1_1_1_ from user user0_ left outer join id generalseq1_ on user0_.idd=generalseq1_.number where user0_.email=?

@@ -1,5 +1,6 @@
 package account.Controllers;
 
+import account.SecurityEvents.Event;
 import account.SecurityEvents.EventService;
 import account.SecurityEvents.EventServiceImp;
 import account.user.User;
@@ -28,6 +29,11 @@ public class AuditorRestController {
     public ResponseEntity deleteUser(@PathVariable(required = false) String email) {
 
         System.out.println("\n\n*******Inside api/security/events**********\n\n");
+
+
+        int i = 1;
+        for(Event e : eventService.getAll())
+            System.out.println(i++ + e.toString());
 
         return new ResponseEntity(eventService.getAll(), HttpStatus.OK);
 
