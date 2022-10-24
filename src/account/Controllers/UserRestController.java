@@ -33,13 +33,6 @@ public class UserRestController {
 
         String message = "User exist!";
 
-        System.out.println("\n\nREGISTRATION\n");
-        System.out.println(user.getName());
-        System.out.println(user.getLastname());
-
-        System.out.println(user.getEmail());
-        System.out.println(user.getPassword() + "\n********************");
-
 
         if(user.valid()) {
             user.setEmail(user.getEmail().toLowerCase());
